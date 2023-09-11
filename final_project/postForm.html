@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ITP 303 Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="postForm.css">
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="navbar">
+            <a class="def-button" href="about.html">
+                about
+            </a>
+
+            <a class="def-button" href="gallery.html">
+                gallery
+            </a>
+            <a class="def-button" href="blog.html">
+               blog
+            </a>
+
+        </div>
+        <h1>new post</h1>
+        
+        <form action="blog.html">
+            <div class="form-input">
+                <div class="img-preview">
+                    <img id="img-file-preview">
+                </div>
+                <label for="img-file" required>Upload Image</label>
+                <input type="file" id="img-file" accept="image/*" onchange="showPreview(event);">
+
+            </div>
+
+            <div class="caption-form">
+
+                <label for="caption" required>Caption</label>
+                <!-- <input type="text" id="caption" name="caption-content" placeholder="What would you like to share?"> -->
+                <textarea name="caption-content" id="caption" cols="30" rows="10" maxlength="1000"
+                    placeholder="What would you like to share?"></textarea>
+
+
+            </div>
+            <button class="disabled-button" disabled>post!</button>
+            <!-- <button class="def-button" >post!</button> -->
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <!-- <div class = "center">seeing if stuff goes here</div> -->
+    </div>
+
+    <script src="postForm.js"></script>
+
+
+</body>
+
+</html>

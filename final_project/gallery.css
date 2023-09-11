@@ -1,0 +1,335 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    /* overflow: hidden; */
+    /* background-color: pink; */
+}
+
+
+p {
+    line-height: 1.5;
+}
+
+/* START REALMS CSS */
+.header-banner {
+    /* background-color: pink; */
+    text-align: center;
+    height: 275px;
+    width: 100%;
+    position: relative;
+    /* padding: 10px; */ 
+    /* background-image: url("img/realms/014_Sky.jpeg"); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   color: #3c546c;
+   
+
+}
+
+.title {
+    padding: 40px;
+    /* width: 100%; */
+}
+
+.arrows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+   
+}
+.arrow-down {
+    border: solid #3c546c;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.realm-banner {
+    height: 1000px;
+    width: 100%;
+    position: relative;
+    /* padding: 10px; */
+}
+.realm-description {
+    max-width: 550px;
+    width: 75%;
+    color: white;
+    position: absolute;
+    
+}
+
+h2, h3 {
+    font-family: abigate, fantasy;
+    font-size: 4em;
+    /* line-height: 0.1; */
+    padding-bottom: 10px;
+    margin: 0px;
+}
+
+.isle-description {
+    top: 65%;
+    left: 45px;
+}
+
+.prarie-description {
+    top: 65%;
+    right: 55px;
+    
+}
+
+.forest-description {
+    top: 65%;
+    left: 45px
+}
+
+.valley-description {
+    top: 65%;
+    right: 55px;
+}
+
+.wasteland-description {
+    top: 65%;
+    right: 55px;
+}
+
+.vault-description {
+    top: 65%;
+    left: 55px;
+}
+#isle-banner {
+    background-image: url("img/realms/1_isle_3bd558e155.jpeg");
+    background-size: cover;
+}
+
+#prarie-banner {
+    background-image: url("img/realms/2_prairie_7d7846757a.jpeg");
+    background-size: cover;
+}
+#forest-banner {
+    background-image: url("img/realms/3_Forest006.png");
+    background-size: cover;
+}
+#valley-banner {
+    background-image: url("img/realms/4_Valley003.png");
+    background-size: cover;
+}
+#wasteland-banner {
+    background-image: url("img/realms/5_Wasteland002.png");
+    background-size: cover;
+}
+#vault-banner {
+    background-image: url("img/realms/6_vault_113ed76ed9.jpeg");
+    background-size: cover;
+}
+
+/* START CONCEPT ART CSS */
+
+/* card 1: 55 to 45 */
+/* card 2: 65 to 35 */
+/* card 3: 100% banner */
+/* card 4: 50 to 50 */
+
+
+.concept-art {
+    /* background-color: pink; */
+}
+.card1, .card2, .card3, .card4, .card5, .card6, .card7{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    /* background-color: cadetblue; */
+    height: 600px;
+    /* width: auto; */
+    padding:2%;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.art1 {
+    /* background-color: pink; */
+    height: 100%;
+    width: 55%;
+    overflow: hidden;
+    margin-right: 10px;
+    
+}
+
+.art1 > img{
+    height: 100%;
+    width: auto;
+}
+
+.art2 {
+    /* background-color: cornflowerblue; */
+    height: 100%;
+    width: 45%;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.art2 > img {
+    height: 100%;
+    width: auto;
+}
+
+
+.art3, .art13 {
+    /* background-color: pink; */
+    width: 65%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.art3 > img, .art4 > img, .art5 > img, .art6 > img, .art7 > img,
+.art8 > img, .art9 > img, .art13 > img, .art14 > img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    
+}
+
+.art4, .art14 {
+    /* background-color: cornflowerblue; */
+    width: 35%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.card3 {
+    height: 350px;
+    padding: 0;
+    /* background-color: orange; */
+}
+
+.card4 {
+    background-color: black;
+    
+}
+
+.card5 {
+    background-color: pink;
+    height: 220px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.card6 {
+    background-color: black;
+    height: 500px;
+}
+
+.card7 {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.art5 {
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+
+.art6 {
+    width: 50%;
+    overflow: hidden;
+}
+
+.art7 {
+    min-width: 1050px;
+    width: 60%;
+    overflow: hidden;
+    /* background-color: orange; */
+}
+
+.art8 {
+    width: 70%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.art9 {
+
+    width: 30%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+
+.card-auto{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-color: black;
+}
+
+.art13 {
+    margin-right: 0px;
+    margin-left: 10px;
+}
+
+.art14 {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+#last-banner {
+    background-color: black;
+}
+
+.footer {
+    padding-bottom: 1%;
+    background-color: black;
+}
+
+.icon {
+    background-color: black;
+}
+
+.icons {
+    margin-bottom: 10px;
+}
+
+
+.tgc {
+    line-height: 0;
+    color: white;
+}
+
+
+hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double white;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+hr:after {
+    content: "✧";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1em;
+    padding: 0 .75em;
+    background: black;
+}
+
+#bottom-text {
+    color: white;
+    background-color: black;
+
+}

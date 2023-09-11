@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ITP 303 Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+    </style>
+</head>
+
+<body>
+    <a href="postForm.html">
+        <button class="def-button" id="post-button">+</button>
+    </a>
+
+    <div class="main">
+        <div class="navbar">
+            <a class="def-button" href="about.html">
+                about
+            </a>
+
+            <a class="def-button" href="gallery.html">
+                gallery
+            </a>
+            <a class="def-button" href="blog.html">
+                blog
+            </a>
+            <button class="log-button" id="logout-button">
+                <img src="img/icon-png/Elder-Mask-Icon-Forest-Morybel-0146.webp" alt="">
+            </button>
+
+            <div class = "account-table">
+                <div class = "account" >
+                    <div class="account-pic">
+                            <img src="img/gray-empty-cat-img.jpg" alt="">
+                    </div>
+                    <div>username</div>
+                </div>
+                <div>log out</div>
+                <!-- <div class = "af">test</div> -->
+
+            </div>
+        </div>
+
+        <div id = "p-stream" class="post-stream">
+
+            <div class="post">
+                <div class="info">
+                    <div class="user">
+                        <div class="profile-pic">
+                            <img src="img/gray-empty-cat-img.jpg" alt="">
+                        </div>
+
+                        <div class="username">Anonymous</div>
+                    </div>
+                </div>
+
+                <img class="post-image" src="img/concept-art/c1/088_Sky.jpeg" alt="">
+
+                <div class="post-content">
+                    <div class="reactions">
+                        <!-- like png -->
+                        <img id = "h" class="h post-icon" onclick= "toggleLike()" src="img/icon-png/like.png" alt="">
+                        <img id = "hf" class="hf post-icon hidden" onclick= "toggleLike()" src="img/icon-png/like-filled.png" alt="">
+                        <!-- comment png -->
+                        <a class="post-icon comment-png" href="detailedPost.html">
+                            <img class="post-icon" src="img/icon-png/comment.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p class="likes">[NUM] like(s)</p>
+                    <p class="description">POST CAPTION</p>
+                    <div class="delete">
+                        <button class="delete-button" onclick= "deletePost()">delete</button>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+            <div class="post">
+                <div class="info">
+                    <div class="user">
+                        <div class="profile-pic">
+                            <img src="img/gray-empty-cat-img.jpg" alt="">
+                        </div>
+
+                        <div class="username">Anonymous</div>
+                    </div>
+                </div>
+
+                <img class="post-image" src="img/concept-art/c6/186_Sky.jpeg" alt="">
+
+                <div class="post-content">
+                    <div class="reactions">
+                        <!-- like png -->
+                        <img class="h post-icon" onclick= "toggleLike()" src="img/icon-png/like.png" alt="">
+                        <img  class="hf post-icon hidden" onclick= "toggleLike()" src="img/icon-png/like-filled.png" alt="">
+                        <!-- comment png -->
+                        <a class="post-icon comment-png" href="detailedPost.html">
+                            <img class="post-icon" src="img/icon-png/comment.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p class="likes">[NUM] like(s)</p>
+                    <p class="description">POST CAPTION</p>
+                    <div class="delete">
+                        <button class="delete-button">delete</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+            <div class="post">
+                <div class="info">
+                    <div class="user">
+                        <div class="profile-pic">
+                            <img src="img/gray-empty-cat-img.jpg" alt="">
+                        </div>
+
+                        <div class="username">Anonymous</div>
+                    </div>
+                </div>
+
+                <img class="post-image" src="img/concept-art/203_Sky.jpeg" alt="">
+
+                <div class="post-content">
+                    <div class="reactions">
+                        <!-- like png -->
+                        <img class="post-icon" src="img/icon-png/like.png" alt="">
+                        <!-- comment png -->
+                        <img class="post-icon comment-png" src="img/icon-png/comment.png" alt="">
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p class="likes">[NUM] like(s)</p>
+                    <p class="description">POST CAPTION</p>
+                    <div class="delete">
+                        <button class="delete-button">delete</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+        <!-- end post-stream -->
+
+        <div class="page-count">
+            <p class="page1 underline">1</p>
+            <p class="page2">2</p>
+            <p class="page3">3</p>
+            <p class="page4">4</p>
+        </div>
+
+    </div>
+
+    <div class="bottom">
+        <hr>
+
+        <!-- Footer -->
+        <div class="footer ">
+            <div class="icons">
+                <a class="icon facebook" href="https://www.facebook.com/thatskygame/">
+                    <img src="img/logos/facebook-blue.png" alt="">
+                </a>
+                <a class="icon twitter" href="https://twitter.com/thatskygame?lang=en">
+                    <img src="img/logos/twitter-blue.png" alt="">
+                </a>
+                <a class="icon instagram" href="https://www.instagram.com/thatskygamejp/">
+                    <img src="img/logos/instagram-blue.png" alt="">
+                </a>
+                <a class="icon discord" href="https://discord.com/invite/thatskygame">
+                    <img src="img/logos/discord-blue.png" alt="">
+                </a>
+            </div>
+            <div class="bottom-text">
+                <p class="tgc">University of Southern California &copy; 2023</p>
+            </div>
+        </div>
+    </div>
+    <script src="blog.js"></script>
+    <script>
+// Tabbed Menu
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html><head>
+<script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <title>Cats</title>
+    <meta name="description" content="Cat Rescue/Adoption Form">
+    <meta name="keywords" content="cat cats shelter adoption rescue">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cats.css">
+  
+
+
+    <!-- <style>
+        #sucessful-submit ul {
+            list-style: none;
+        }
+    </style> -->
+</head>
+
+<body class="py-5">
+    <div class="container">
+		<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+    <div class="container">
+       
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat Registration</h2>
+
+            <div class="col-12">
+
+                <form id="cat-form">
+
+                    <!-- name, gender -->
+                    <div class="form-group row">
+                        <!-- cat name -->
+                        <label for="cat-name" class="col-sm-2 col-form-label required">Cat Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="cat-name" class="form-control" placeholder="Cat Name" id="cat-name">
+
+                            <small id="cat-name-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- gender; input: M/F, Male, Female, or Unknown -->
+                        <label for="gender" class="col-sm-2 col-form-label required">Gender:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="gender">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+
+                            <small id="gender-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+
+                    <!-- age, spay neuter -->
+                    <div class="form-group row">
+                        <!-- Age: Baby, Young, Adult, Senior -->
+                        <label for="age" class="col-sm-2 col-form-label required">Age:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="age">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Baby">Baby</option>
+                                <option value="Young">Young</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Senior">Senior</option>
+                            </select>
+
+                            <small id="age-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- Spayed/Neutered: Yes, No -->
+                        <label for="spay" class="col-sm-2 col-form-label required">Spayed / Neutered:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="spay">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+
+                            </select>
+
+                            <small id="spay-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- breed/pattern -->
+                    <div class="form-group row">
+                        <label for="breed" class="col-sm-2 col-form-label required">Breed / Pattern:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="breed" class="form-control" placeholder="Tabby, Calico, Tuxedo" id="breed">
+
+                            <small id="breed-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- color -->
+                    <div class="form-group row">
+                        <label for="color" class="col-sm-2 col-form-label required">Color Description:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="color" class="form-control" placeholder="White, Black, Brown" id="color">
+
+                            <small id="color-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- ok with what -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Ok With:</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="cats" value="cats">
+                                <label class="form-check-label my-1" for="cats">Cats</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="dogs" value="dogs">
+                                <label class="form-check-label my-1" for="dogs">Dogs</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="kids" value="kids">
+                                <label class="form-check-label my-1" for="kids">Kids</label>
+                            </div> <!-- .form-check -->
+
+                            <small id="ok-with-error" class="form-text text-danger"></small>
+
+                        </div><!-- .col -->
+                    </div> <!-- .form-group -->
+
+                    <div class="row mb-2">
+						<div class="col-sm-8 offset-sm-2">
+							<small class="form-text text-muted">Please provide a square image for best results.</small>
+						</div>
+					</div> <!-- .row -->
+
+                    <div class="form-group row">
+                        <label for="pic" class="col-sm-2 col-form-label">Image URL:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="pic" class="form-control" placeholder="https://..." id="pic">
+
+                            <small id="pic-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> <!-- .col -->
+                    </div> <!-- .form-group -->
+
+
+                </form>
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat List</h2>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8 mt-3">
+                <button id="delete-all" class="btn btn-outline-danger mb-3">Delete All</button>
+            
+                <ul id="cat-list" class="list-group">
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/booba.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Booba</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Tabby</div>
+                            <div><strong>Color Description: </strong>Orange</div>
+                            <div><strong>OK with: </strong>Cats</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/gray-empty-cat-img.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Jambo</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Calico</div>
+                            <div><strong>Color Description: </strong>White, Brown</div>
+                            <div><strong>OK with: </strong>Cats Kids</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                <li class="list-group-item d-flex"><div class="image-place"><img src="img/gray-empty-cat-img.jpg" alt="Sd"></div><div class="cat-info"><div><strong>Cat Name: </strong>Sd</div><div><strong>Gender: </strong>Unknown</div><div><strong>Age: </strong>Senior</div><div><strong>Spayed/Neutered: </strong>No</div><div><strong>Breed/Pattern: </strong>s</div><div><strong>Color Description: </strong>s</div><div><strong>OK with: </strong>Cats Kids </div><button class="cat-delete btn btn-outline-secondary mb-3">Delete</button></div></li></ul>
+            
+            
+            </div>
+        </div>
+<!-- 
+        <div class = "row">
+            <div class="col-6 col-md-3 col-lg-12 mx-auto">
+                <p>Image Description</p>
+            </div>
+
+
+        </div> -->
+
+
+    </div>
+
+
+    <script src="cats.js"></script>
+
+
+
+</body></html>
+<head>
+<script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <title>Cats</title>
+    <meta name="description" content="Cat Rescue/Adoption Form">
+    <meta name="keywords" content="cat cats shelter adoption rescue">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cats.css">
+  
+
+
+    <!-- <style>
+        #sucessful-submit ul {
+            list-style: none;
+        }
+    </style> -->
+</head>
+<script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+<title>Cats</title>
+<meta name="description" content="Cat Rescue/Adoption Form">
+<meta name="keywords" content="cat cats shelter adoption rescue">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="cats.css">
+<!-- <style>
+        #sucessful-submit ul {
+            list-style: none;
+        }
+    </style> -->
+<head>
+<script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <title>Cats</title>
+    <meta name="description" content="Cat Rescue/Adoption Form">
+    <meta name="keywords" content="cat cats shelter adoption rescue">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cats.css">
+  
+
+
+    <!-- <style>
+        #sucessful-submit ul {
+            list-style: none;
+        }
+    </style> -->
+</head>
+<body class="py-5">
+    <div class="container">
+		<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+    <div class="container">
+       
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat Registration</h2>
+
+            <div class="col-12">
+
+                <form id="cat-form">
+
+                    <!-- name, gender -->
+                    <div class="form-group row">
+                        <!-- cat name -->
+                        <label for="cat-name" class="col-sm-2 col-form-label required">Cat Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="cat-name" class="form-control" placeholder="Cat Name" id="cat-name">
+
+                            <small id="cat-name-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- gender; input: M/F, Male, Female, or Unknown -->
+                        <label for="gender" class="col-sm-2 col-form-label required">Gender:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="gender">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+
+                            <small id="gender-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+
+                    <!-- age, spay neuter -->
+                    <div class="form-group row">
+                        <!-- Age: Baby, Young, Adult, Senior -->
+                        <label for="age" class="col-sm-2 col-form-label required">Age:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="age">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Baby">Baby</option>
+                                <option value="Young">Young</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Senior">Senior</option>
+                            </select>
+
+                            <small id="age-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- Spayed/Neutered: Yes, No -->
+                        <label for="spay" class="col-sm-2 col-form-label required">Spayed / Neutered:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="spay">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+
+                            </select>
+
+                            <small id="spay-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- breed/pattern -->
+                    <div class="form-group row">
+                        <label for="breed" class="col-sm-2 col-form-label required">Breed / Pattern:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="breed" class="form-control" placeholder="Tabby, Calico, Tuxedo" id="breed">
+
+                            <small id="breed-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- color -->
+                    <div class="form-group row">
+                        <label for="color" class="col-sm-2 col-form-label required">Color Description:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="color" class="form-control" placeholder="White, Black, Brown" id="color">
+
+                            <small id="color-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- ok with what -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Ok With:</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="cats" value="cats">
+                                <label class="form-check-label my-1" for="cats">Cats</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="dogs" value="dogs">
+                                <label class="form-check-label my-1" for="dogs">Dogs</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="kids" value="kids">
+                                <label class="form-check-label my-1" for="kids">Kids</label>
+                            </div> <!-- .form-check -->
+
+                            <small id="ok-with-error" class="form-text text-danger"></small>
+
+                        </div><!-- .col -->
+                    </div> <!-- .form-group -->
+
+                    <div class="row mb-2">
+						<div class="col-sm-8 offset-sm-2">
+							<small class="form-text text-muted">Please provide a square image for best results.</small>
+						</div>
+					</div> <!-- .row -->
+
+                    <div class="form-group row">
+                        <label for="pic" class="col-sm-2 col-form-label">Image URL:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="pic" class="form-control" placeholder="https://..." id="pic">
+
+                            <small id="pic-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> <!-- .col -->
+                    </div> <!-- .form-group -->
+
+
+                </form>
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat List</h2>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8 mt-3">
+                <button id="delete-all" class="btn btn-outline-danger mb-3">Delete All</button>
+            
+                <ul id="cat-list" class="list-group">
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/booba.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Booba</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Tabby</div>
+                            <div><strong>Color Description: </strong>Orange</div>
+                            <div><strong>OK with: </strong>Cats</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/gray-empty-cat-img.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Jambo</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Calico</div>
+                            <div><strong>Color Description: </strong>White, Brown</div>
+                            <div><strong>OK with: </strong>Cats Kids</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                <li class="list-group-item d-flex"><div class="image-place"><img src="img/gray-empty-cat-img.jpg" alt="Sd"></div><div class="cat-info"><div><strong>Cat Name: </strong>Sd</div><div><strong>Gender: </strong>Unknown</div><div><strong>Age: </strong>Senior</div><div><strong>Spayed/Neutered: </strong>No</div><div><strong>Breed/Pattern: </strong>s</div><div><strong>Color Description: </strong>s</div><div><strong>OK with: </strong>Cats Kids </div><button class="cat-delete btn btn-outline-secondary mb-3">Delete</button></div></li></ul>
+            
+            
+            </div>
+        </div>
+<!-- 
+        <div class = "row">
+            <div class="col-6 col-md-3 col-lg-12 mx-auto">
+                <p>Image Description</p>
+            </div>
+
+
+        </div> -->
+
+
+    </div>
+
+
+    <script src="cats.js"></script>
+
+
+
+</body>
+<div class="container">
+		<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div> <!-- .row -->
+	</div>
+<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div>
+<h1 class="col-12">Cats yay</h1>
+<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div>
+<!-- .row -->
+<div class="container">
+		<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div> <!-- .row -->
+	</div>
+<!-- .container -->
+<div class="container">
+       
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat Registration</h2>
+
+            <div class="col-12">
+
+                <form id="cat-form">
+
+                    <!-- name, gender -->
+                    <div class="form-group row">
+                        <!-- cat name -->
+                        <label for="cat-name" class="col-sm-2 col-form-label required">Cat Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="cat-name" class="form-control" placeholder="Cat Name" id="cat-name">
+
+                            <small id="cat-name-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- gender; input: M/F, Male, Female, or Unknown -->
+                        <label for="gender" class="col-sm-2 col-form-label required">Gender:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="gender">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+
+                            <small id="gender-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+
+                    <!-- age, spay neuter -->
+                    <div class="form-group row">
+                        <!-- Age: Baby, Young, Adult, Senior -->
+                        <label for="age" class="col-sm-2 col-form-label required">Age:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="age">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Baby">Baby</option>
+                                <option value="Young">Young</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Senior">Senior</option>
+                            </select>
+
+                            <small id="age-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- Spayed/Neutered: Yes, No -->
+                        <label for="spay" class="col-sm-2 col-form-label required">Spayed / Neutered:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="spay">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+
+                            </select>
+
+                            <small id="spay-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- breed/pattern -->
+                    <div class="form-group row">
+                        <label for="breed" class="col-sm-2 col-form-label required">Breed / Pattern:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="breed" class="form-control" placeholder="Tabby, Calico, Tuxedo" id="breed">
+
+                            <small id="breed-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- color -->
+                    <div class="form-group row">
+                        <label for="color" class="col-sm-2 col-form-label required">Color Description:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="color" class="form-control" placeholder="White, Black, Brown" id="color">
+
+                            <small id="color-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- ok with what -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Ok With:</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="cats" value="cats">
+                                <label class="form-check-label my-1" for="cats">Cats</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="dogs" value="dogs">
+                                <label class="form-check-label my-1" for="dogs">Dogs</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="kids" value="kids">
+                                <label class="form-check-label my-1" for="kids">Kids</label>
+                            </div> <!-- .form-check -->
+
+                            <small id="ok-with-error" class="form-text text-danger"></small>
+
+                        </div><!-- .col -->
+                    </div> <!-- .form-group -->
+
+                    <div class="row mb-2">
+						<div class="col-sm-8 offset-sm-2">
+							<small class="form-text text-muted">Please provide a square image for best results.</small>
+						</div>
+					</div> <!-- .row -->
+
+                    <div class="form-group row">
+                        <label for="pic" class="col-sm-2 col-form-label">Image URL:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="pic" class="form-control" placeholder="https://..." id="pic">
+
+                            <small id="pic-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> <!-- .col -->
+                    </div> <!-- .form-group -->
+
+
+                </form>
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+    </div>
+<!-- .container -->
+<div class="container">
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat List</h2>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8 mt-3">
+                <button id="delete-all" class="btn btn-outline-danger mb-3">Delete All</button>
+            
+                <ul id="cat-list" class="list-group">
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/booba.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Booba</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Tabby</div>
+                            <div><strong>Color Description: </strong>Orange</div>
+                            <div><strong>OK with: </strong>Cats</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/gray-empty-cat-img.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Jambo</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Calico</div>
+                            <div><strong>Color Description: </strong>White, Brown</div>
+                            <div><strong>OK with: </strong>Cats Kids</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                <li class="list-group-item d-flex"><div class="image-place"><img src="img/gray-empty-cat-img.jpg" alt="Sd"></div><div class="cat-info"><div><strong>Cat Name: </strong>Sd</div><div><strong>Gender: </strong>Unknown</div><div><strong>Age: </strong>Senior</div><div><strong>Spayed/Neutered: </strong>No</div><div><strong>Breed/Pattern: </strong>s</div><div><strong>Color Description: </strong>s</div><div><strong>OK with: </strong>Cats Kids </div><button class="cat-delete btn btn-outline-secondary mb-3">Delete</button></div></li></ul>
+            
+            
+            </div>
+        </div>
+<!-- 
+        <div class = "row">
+            <div class="col-6 col-md-3 col-lg-12 mx-auto">
+                <p>Image Description</p>
+            </div>
+
+
+        </div> -->
+
+
+    </div>
+<script src="cats.js"></script>
+<body class="py-5">
+    <div class="container">
+		<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+    <div class="container">
+       
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat Registration</h2>
+
+            <div class="col-12">
+
+                <form id="cat-form">
+
+                    <!-- name, gender -->
+                    <div class="form-group row">
+                        <!-- cat name -->
+                        <label for="cat-name" class="col-sm-2 col-form-label required">Cat Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="cat-name" class="form-control" placeholder="Cat Name" id="cat-name">
+
+                            <small id="cat-name-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- gender; input: M/F, Male, Female, or Unknown -->
+                        <label for="gender" class="col-sm-2 col-form-label required">Gender:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="gender">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+
+                            <small id="gender-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+
+                    <!-- age, spay neuter -->
+                    <div class="form-group row">
+                        <!-- Age: Baby, Young, Adult, Senior -->
+                        <label for="age" class="col-sm-2 col-form-label required">Age:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="age">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Baby">Baby</option>
+                                <option value="Young">Young</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Senior">Senior</option>
+                            </select>
+
+                            <small id="age-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- Spayed/Neutered: Yes, No -->
+                        <label for="spay" class="col-sm-2 col-form-label required">Spayed / Neutered:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="spay">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+
+                            </select>
+
+                            <small id="spay-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- breed/pattern -->
+                    <div class="form-group row">
+                        <label for="breed" class="col-sm-2 col-form-label required">Breed / Pattern:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="breed" class="form-control" placeholder="Tabby, Calico, Tuxedo" id="breed">
+
+                            <small id="breed-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- color -->
+                    <div class="form-group row">
+                        <label for="color" class="col-sm-2 col-form-label required">Color Description:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="color" class="form-control" placeholder="White, Black, Brown" id="color">
+
+                            <small id="color-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- ok with what -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Ok With:</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="cats" value="cats">
+                                <label class="form-check-label my-1" for="cats">Cats</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="dogs" value="dogs">
+                                <label class="form-check-label my-1" for="dogs">Dogs</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="kids" value="kids">
+                                <label class="form-check-label my-1" for="kids">Kids</label>
+                            </div> <!-- .form-check -->
+
+                            <small id="ok-with-error" class="form-text text-danger"></small>
+
+                        </div><!-- .col -->
+                    </div> <!-- .form-group -->
+
+                    <div class="row mb-2">
+						<div class="col-sm-8 offset-sm-2">
+							<small class="form-text text-muted">Please provide a square image for best results.</small>
+						</div>
+					</div> <!-- .row -->
+
+                    <div class="form-group row">
+                        <label for="pic" class="col-sm-2 col-form-label">Image URL:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="pic" class="form-control" placeholder="https://..." id="pic">
+
+                            <small id="pic-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> <!-- .col -->
+                    </div> <!-- .form-group -->
+
+
+                </form>
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat List</h2>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8 mt-3">
+                <button id="delete-all" class="btn btn-outline-danger mb-3">Delete All</button>
+            
+                <ul id="cat-list" class="list-group">
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/booba.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Booba</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Tabby</div>
+                            <div><strong>Color Description: </strong>Orange</div>
+                            <div><strong>OK with: </strong>Cats</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/gray-empty-cat-img.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Jambo</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Calico</div>
+                            <div><strong>Color Description: </strong>White, Brown</div>
+                            <div><strong>OK with: </strong>Cats Kids</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                <li class="list-group-item d-flex"><div class="image-place"><img src="img/gray-empty-cat-img.jpg" alt="Sd"></div><div class="cat-info"><div><strong>Cat Name: </strong>Sd</div><div><strong>Gender: </strong>Unknown</div><div><strong>Age: </strong>Senior</div><div><strong>Spayed/Neutered: </strong>No</div><div><strong>Breed/Pattern: </strong>s</div><div><strong>Color Description: </strong>s</div><div><strong>OK with: </strong>Cats Kids </div><button class="cat-delete btn btn-outline-secondary mb-3">Delete</button></div></li></ul>
+            
+            
+            </div>
+        </div>
+<!-- 
+        <div class = "row">
+            <div class="col-6 col-md-3 col-lg-12 mx-auto">
+                <p>Image Description</p>
+            </div>
+
+
+        </div> -->
+
+
+    </div>
+
+
+    <script src="cats.js"></script>
+
+
+
+</body>
+<html><head>
+<script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <title>Cats</title>
+    <meta name="description" content="Cat Rescue/Adoption Form">
+    <meta name="keywords" content="cat cats shelter adoption rescue">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="cats.css">
+  
+
+
+    <!-- <style>
+        #sucessful-submit ul {
+            list-style: none;
+        }
+    </style> -->
+</head>
+
+<body class="py-5">
+    <div class="container">
+		<div class="row">
+    <h1 class="col-12">Cats yay</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+    <div class="container">
+       
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat Registration</h2>
+
+            <div class="col-12">
+
+                <form id="cat-form">
+
+                    <!-- name, gender -->
+                    <div class="form-group row">
+                        <!-- cat name -->
+                        <label for="cat-name" class="col-sm-2 col-form-label required">Cat Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="cat-name" class="form-control" placeholder="Cat Name" id="cat-name">
+
+                            <small id="cat-name-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- gender; input: M/F, Male, Female, or Unknown -->
+                        <label for="gender" class="col-sm-2 col-form-label required">Gender:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="gender">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Unknown">Unknown</option>
+                            </select>
+
+                            <small id="gender-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+
+                    <!-- age, spay neuter -->
+                    <div class="form-group row">
+                        <!-- Age: Baby, Young, Adult, Senior -->
+                        <label for="age" class="col-sm-2 col-form-label required">Age:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="age">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Baby">Baby</option>
+                                <option value="Young">Young</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Senior">Senior</option>
+                            </select>
+
+                            <small id="age-error" class="form-text text-danger"></small>
+
+                        </div>
+
+                        <!-- Spayed/Neutered: Yes, No -->
+                        <label for="spay" class="col-sm-2 col-form-label required">Spayed / Neutered:</label>
+                        <div class="col-sm-4">
+                            <select class="form-control" id="spay">
+                                <option value="-1" disabled="" selected="">-- Select One --</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+
+                            </select>
+
+                            <small id="spay-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- breed/pattern -->
+                    <div class="form-group row">
+                        <label for="breed" class="col-sm-2 col-form-label required">Breed / Pattern:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="breed" class="form-control" placeholder="Tabby, Calico, Tuxedo" id="breed">
+
+                            <small id="breed-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- color -->
+                    <div class="form-group row">
+                        <label for="color" class="col-sm-2 col-form-label required">Color Description:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="color" class="form-control" placeholder="White, Black, Brown" id="color">
+
+                            <small id="color-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <!-- ok with what -->
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Ok With:</label>
+                        <div class="col-sm-10">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="cats" value="cats">
+                                <label class="form-check-label my-1" for="cats">Cats</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="dogs" value="dogs">
+                                <label class="form-check-label my-1" for="dogs">Dogs</label>
+                            </div> <!-- .form-check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="kids" value="kids">
+                                <label class="form-check-label my-1" for="kids">Kids</label>
+                            </div> <!-- .form-check -->
+
+                            <small id="ok-with-error" class="form-text text-danger"></small>
+
+                        </div><!-- .col -->
+                    </div> <!-- .form-group -->
+
+                    <div class="row mb-2">
+						<div class="col-sm-8 offset-sm-2">
+							<small class="form-text text-muted">Please provide a square image for best results.</small>
+						</div>
+					</div> <!-- .row -->
+
+                    <div class="form-group row">
+                        <label for="pic" class="col-sm-2 col-form-label">Image URL:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="pic" class="form-control" placeholder="https://..." id="pic">
+
+                            <small id="pic-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> <!-- .col -->
+                    </div> <!-- .form-group -->
+
+
+                </form>
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Cat List</h2>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8 mt-3">
+                <button id="delete-all" class="btn btn-outline-danger mb-3">Delete All</button>
+            
+                <ul id="cat-list" class="list-group">
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/booba.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Booba</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Tabby</div>
+                            <div><strong>Color Description: </strong>Orange</div>
+                            <div><strong>OK with: </strong>Cats</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                    <li class="list-group-item d-flex">
+                        <div class="image-place">
+                            <img class="cat-img" src="img/gray-empty-cat-img.jpg" alt="Sample Image">
+                        </div>
+                        
+						<div class="cat-info">
+							<!-- <span class="badge badge-pill mr-3 badge-danger">High</span> -->
+                            <div><strong>Cat Name: </strong>Jambo</div>
+                            <div><strong>Gender: </strong>Male</div>
+                            <div><strong>Age: </strong>Young</div>
+                            <div><strong>Spayed/Neutered: </strong>Yes</div>
+                            <div><strong>Breed/Pattern: </strong>Calico</div>
+                            <div><strong>Color Description: </strong>White, Brown</div>
+                            <div><strong>OK with: </strong>Cats Kids</div>
+                            <button class="cat-delete btn btn-outline-secondary mb-3">Delete</button>
+							<!-- <span class="cat-remove oi oi-circle-x" title="Remove"></span> -->
+						</div>
+                        
+					</li>
+
+
+                <li class="list-group-item d-flex"><div class="image-place"><img src="img/gray-empty-cat-img.jpg" alt="Sd"></div><div class="cat-info"><div><strong>Cat Name: </strong>Sd</div><div><strong>Gender: </strong>Unknown</div><div><strong>Age: </strong>Senior</div><div><strong>Spayed/Neutered: </strong>No</div><div><strong>Breed/Pattern: </strong>s</div><div><strong>Color Description: </strong>s</div><div><strong>OK with: </strong>Cats Kids </div><button class="cat-delete btn btn-outline-secondary mb-3">Delete</button></div></li></ul>
+            
+            
+            </div>
+        </div>
+<!-- 
+        <div class = "row">
+            <div class="col-6 col-md-3 col-lg-12 mx-auto">
+                <p>Image Description</p>
+            </div>
+
+
+        </div> -->
+
+
+    </div>
+
+
+    <script src="cats.js"></script>
+
+
+
+</body></html>

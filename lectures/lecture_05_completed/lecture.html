@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Mouse, Keyboard, & Form Events</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lecture.css">
+	<style>
+		#pixel-box {
+			height: 200px;
+		}
+
+		#box {
+			width: 150px;
+			height: 150px;
+			line-height: 150px;
+			text-align: center;
+			font-size: 1.2em;
+			margin: auto;
+			background-color: #CCC;
+			border: 1px solid #000;
+			border-radius: 5px;
+
+			position: relative;
+			left: 0px;
+		}
+	</style>
+</head>
+
+<body class="py-5">
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12">Mouse, Keyboard, & Form Events</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<div id="kanye-section" class="container mt-4">
+		<div class="row">
+			<h2 class="col-12">Image Switch and Resizing</h2>
+		</div> <!-- .row -->
+		<div class="col-12 text-center">
+			<button id="kanye-decrease" class="btn btn-danger mx-1 my-3">Decrease by 20px</button>
+			<button id="kanye-increase" class="btn btn-success mx-1 my-3">Increase by 20px</button>
+		</div>
+		<img id="kanye" src="img/kanye-1.jpg" alt="Kanye West">
+		<p class="text-center">Hover over the image to flip it:</p>
+	</div> <!-- #kanye-section -->
+
+	<div id="color-boxes" class="container mt-4">
+		<div class="row">
+			<h2 class="col-12">Background Color Change</h2>
+			<p class="col-12">Click on a square to change background color:</p>
+		</div> <!-- .row -->
+
+		<div id="color-wrapper" class="row">
+			<div class="color-box text-center border border-dark col-4 col-md mx-md-1 my-md-1" id="color-1">
+				#000
+			</div>
+			<div class="color-box text-center border border-dark col-4 col-md mx-md-1 my-md-1" id="color-2">
+				#FFF
+			</div>
+			<div class="color-box text-center border border-dark col-4 col-md mx-md-1 my-md-1" id="color-3">
+				#CCC
+			</div>
+			<div class="color-box text-center border border-dark col-4 col-md mx-md-1 my-md-1" id="color-4">
+				#777
+			</div>
+			<div class="color-box text-center border border-dark col-4 col-md mx-md-1 my-md-1" id="color-5">
+				#FC0
+			</div>
+			<div class="color-box text-center border border-dark col-4 col-md mx-md-1 my-md-1" id="color-6">
+				#900
+			</div>
+		</div> <!-- #color-wrapper -->
+	</div> <!-- #color-boxes -->
+
+	<div class="container">
+		<div class="row">
+			<h2 class="col-12 mt-5 mb-4">Move your Mouse</h2>
+
+			<p class="col-12">
+				Pixels Across: <span id="pixel-msg">2345678</span>
+			</p>
+
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<div class="container-fluid">
+		<div class="row">
+			<div id="pixel-box" class="col-12 border border-dark"></div>
+		</div> <!-- .row -->
+	</div> <!-- .container-fluid -->
+
+	<div class="container">
+		<div class="row">
+			<h2 class="col-12 mt-5 mb-4">Move the Box</h2>
+
+			<div id="box" tabindex="1">
+				Move Me
+			</div>
+
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<div class="container">
+		<div class="row">
+			<h2 class="col-12 mt-5 mb-4">Signup Form</h2>
+
+			<div class="col-12">
+				Validation rules:
+				<ul>
+					<li class="mt-2">Email cannot be empty.</li>
+					<li>Email must contain "@" character.</li>
+					<li>Phone cannot be empty.</li>
+					<li>Phone must use one of the acceptable formats.</li>
+					<li>Class Standing field is required for current students.</li>
+					<li class="mb-4">At least one subscription is required.</li>
+				</ul>
+			</div> <!-- .col -->
+
+			<div class="col-12">
+
+				<form id="signup-form" action="confirmation.html">
+
+					<div class="form-group row">
+						<label for="email" class="col-sm-2 col-form-label">Email:</label>
+						<div class="col-sm-10">
+							<input type="text" name="email" class="form-control" placeholder="ttrojan@usc.edu"
+								id="email">
+
+							<small id="email-error" class="form-text text-danger"></small>
+
+						</div>
+					</div> <!-- .form-group -->
+
+					<div class="row mb-2">
+						<div class="col-sm-8 offset-sm-2">
+							<small class="form-text text-muted">Acceptable formats: 1234567890, (123) 456-7890,
+								123-456-7890</small>
+						</div>
+					</div> <!-- .row -->
+
+					<div class="form-group row">
+						<label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+						<div class="col-sm-8">
+							<input type="text" name="phone" class="form-control" placeholder="(123) 456-7890"
+								id="phone">
+
+							<small id="phone-error" class="form-text text-danger"></small>
+
+						</div>
+					</div> <!-- .form-group -->
+
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Current Student?</label>
+						<div class="col-sm-10">
+							<div class="align-middle form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="student" id="student-yes" value="yes"
+									checked>
+								<label class="form-check-label my-1" for="student-yes">
+									Yes
+								</label>
+							</div> <!-- .form-check -->
+
+							<div class="align-middle form-check form-check-inline">
+								<input class="form-check-input" type="radio" name="student" id="student-no" value="no">
+								<label class="form-check-label my-1" for="student-no">
+									No
+								</label>
+							</div> <!-- .form-check -->
+						</div> <!-- .col -->
+					</div> <!-- .form-group -->
+
+					<div class="form-group row">
+						<label for="class-standing" class="col-sm-2 col-form-label">Class Standing:</label>
+						<div class="col-sm-10">
+							<select class="form-control" id="class-standing">
+								<option value="-1" disabled selected>-- Select One --</option>
+								<option value="freshman">Freshman</option>
+								<option value="sophomore">Sophomore</option>
+								<option value="junior">Junior</option>
+								<option value="senior">Senior</option>
+								<option value="na">N/A</option>
+							</select>
+
+							<small id="class-error" class="form-text text-danger"></small>
+
+						</div>
+					</div> <!-- .form-group -->
+
+					<div class="form-group row">
+						<label class="col-sm-2 col-form-label">Subscribe:</label>
+						<div class="col-sm-10">
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="newsletters" value="newsletters">
+								<label class="form-check-label my-1" for="newsletters">Newsletters</label>
+							</div> <!-- .form-check -->
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="events" value="events">
+								<label class="form-check-label my-1" for="events">Events</label>
+							</div> <!-- .form-check -->
+							<div class="form-check form-check-inline">
+								<input class="form-check-input" type="checkbox" id="marketing" value="marketing">
+								<label class="form-check-label my-1" for="marketing">Marketing</label>
+							</div> <!-- .form-check -->
+
+							<small id="subscribe-error" class="form-text text-danger"></small>
+
+						</div><!-- .col -->
+					</div> <!-- .form-group -->
+
+					<div class="form-group row">
+						<div class="col-sm-10">
+							<button type="submit" class="btn btn-primary">Submit</button>
+						</div> <!-- .col -->
+					</div> <!-- .form-group -->
+
+				</form>
+			</div> <!-- .col -->
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+
+	<script src="emailValidation.js"></script>
+
+	<script>
+		/***** Syntax *****/
+		// alert("Hello World!")
+
+		console.log("Hello Wrold!")
+
+		const name = "Tommy"
+		const age = 18
+		const knowsWebDev = true
+
+		console.log(typeof name)
+		console.log(typeof age)
+		console.log(typeof knowsWebDev)
+
+		// age = 21
+
+		let height = 6
+		console.log(height)
+
+		height = "6'1\""  // want 6'1"
+		console.log(height)
+
+		height = '6\'2"'
+		console.log(height)
+
+		height = `6'3"`
+		console.log(height)
+
+		// Tommy is 18 years old.
+		console.log(name + " is " + age + " years old.")
+		console.log(`${name} is ${age} years old.`)
+
+		console.log(2 + 3)
+		console.log(2 + "3")
+
+		console.log(5 == 5)
+		console.log(5 === 5)
+		console.log(5 == '5')
+		console.log(5 === '5')
+
+		const array = [1, 'string', knowsWebDev]
+		console.log(array)
+
+		greetMorning()
+
+		function greetMorning() {
+			console.log("Good Morning.")
+		}
+
+		const greetAfternoon = function () {
+			console.log("Good Afternoon.")
+		}
+
+		const greetEvening = () => {
+			console.log("Good Evening.")
+		}
+
+		greetMorning()
+		greetAfternoon()
+		greetEvening()
+
+		function greet(greetFunction) {
+			greetFunction()
+		}
+
+		greet(greetMorning)
+		greet(function () {
+			console.log("Hello.")
+		})
+
+
+		/***** Kanye *****/
+
+		console.log(document.querySelector("#kanye"))
+
+		document.querySelector("#kanye").src = "img/kanye-2.jpg"
+
+		document.querySelector("#kanye").style.width = "200px"
+
+		const width = getComputedStyle(document.querySelector("#kanye")).getPropertyValue('width')
+
+		console.log(width)
+
+
+		/*
+			1. Retrieve the width of kanye img
+			2. Do some math
+			3. Set the width CSS of kanye img
+		*/
+		document.querySelector("#kanye-decrease").onclick = () => {
+			console.log("Clicked decrease")
+
+			// 1. Retrieve the width of kanye img
+			const kanye = document.querySelector("#kanye")
+			let width = getComputedStyle(kanye).getPropertyValue('width')
+
+			// 2. Do some math
+			console.log(width)
+			width = parseInt(width)
+			console.log(width)
+
+			width = width - 20
+			console.log(width)
+
+			// 3. Set the width CSS of kanye img
+			kanye.style.width = width + "px"
+		}
+
+		document.querySelector("#kanye-increase").onclick = () => {
+			console.log("Clicked increase")
+
+			// 1. Retrieve the width of kanye img
+			const kanye = document.querySelector("#kanye")
+			let width = getComputedStyle(kanye).getPropertyValue('width')
+
+			// 2. Do some math
+			console.log(width)
+			width = parseInt(width)
+			console.log(width)
+
+			width += 20
+			console.log(width)
+
+			// 3. Set the width CSS of kanye img
+			kanye.style.width = width + "px"
+		}
+
+		/***** Color Boxes *****/
+		const colorBoxes = document.querySelectorAll(".color-box")
+		console.log(colorBoxes)
+
+		/*
+			1. Detect click event
+			2. Retrieve the color of the box
+			3. Set the background-color CSS for the body tag
+		*/
+
+		// for (let i = 0; i < colorBoxes.length; i++) {
+		// 	colorBoxes[i].onclick
+		// }
+
+		for (box of colorBoxes) {
+			// 1. Detect click event
+			box.onclick = function () {
+				console.log(this)
+
+				// 2. Retrieve the color of the box
+				const color = getComputedStyle(this).getPropertyValue("background-color")
+
+				// 3. Set the background-color CSS for the body tag
+				document.body.style.backgroundColor = color
+			}
+		}
+
+		/***** Move your Mouse *****/
+		document.querySelector("#pixel-box").onmousemove = function (event) {
+			console.log(event)
+
+			document.querySelector("#pixel-msg").innerHTML = event.clientX
+			this.style.backgroundColor = `hsl(${event.clientX} 80% 50%)`
+		}
+
+
+		/***** Move the Box *****/
+		// document.onkeydown = (event) => {
+		// 	console.log(event)
+		// }
+
+		document.querySelector("#box").onkeydown = function (event) {
+			console.log("Event within the box")
+			let left = getComputedStyle(this).getPropertyValue('left')
+			console.log(left)
+
+			left = parseInt(left)
+			console.log(left)
+
+			if (event.code === "ArrowRight") {
+				this.style.left = `${left + 10}px`
+			} else if (event.code === "ArrowLeft") {
+				this.style.left = `${left - 10}px`
+			}
+		}
+
+
+		/***** Form Events *****/
+		// document.querySelector("#email").onchange = function() {
+		// 	console.log(this.value)
+		// }
+
+		document.querySelector("#signup-form").onsubmit = function () {
+			console.log("Form Submitted")
+			let validForm = true
+
+			const email = document.querySelector("#email").value.trim()
+			console.log(email)
+
+			if (email.length === 0) {
+				validForm = false
+				document.querySelector("#email-error").innerHTML = "Email cannot be empty."
+			} else if (!isValidEmail(email)) {
+				validForm = false
+				document.querySelector("#email-error").innerHTML = "Invalid email."
+			} else {
+				document.querySelector("#email-error").innerHTML = ""
+			}
+
+			const phone = document.querySelector("#phone").value.trim()
+
+			if (/^$/.test(phone)) {
+				validForm = false
+				document.querySelector("#phone-error").innerHTML = "Phone cannot be empty."
+			} else if (/(^\d{10}$|^\d{3}-\d{3}-\d{4}$|^\(\d{3}\)\s\d{3}-\d{4}$)/.test(phone) === false) { // not valid format   /(patternA|patternB|patternC)/
+				validForm = false
+				document.querySelector("#phone-error").innerHTML = "Invalid phone."
+			} else {
+				document.querySelector("#phone-error").innerHTML = ""
+			}
+
+
+			if (document.querySelector("#newsletters").checked === false
+				&& document.querySelector("#events").checked === false
+				&& document.querySelector("#marketing").checked === false) {
+				validForm = false
+				document.querySelector("#subscribe-error").innerHTML = "At least one subscription is required."
+			} else {
+				document.querySelector("#subscribe-error").innerHTML = ""
+			}
+
+
+			const classStanding = document.querySelector("#class-standing")
+
+			if (classStanding.disabled === false && classStanding.value == -1) {
+				validForm = false
+				document.querySelector("#class-error").innerHTML = "Class standing cannot be empty"
+			} else {
+				document.querySelector("#class-error").innerHTML = ""
+			}
+
+
+
+			return validForm
+		}
+
+		document.querySelector("#student-no").onclick = () => {
+			document.querySelector("#class-standing").disabled = true
+			document.querySelector("#class-error").innerHTML = ""
+		}
+
+		document.querySelector("#student-yes").onclick = () => {
+			document.querySelector("#class-standing").disabled = false
+		}
+
+
+	</script>
+
+</body>
+
+</html>

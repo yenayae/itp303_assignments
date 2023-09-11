@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ITP 303 Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="detailedPost.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+    </style>
+</head>
+
+<body>
+    <a href="postForm.html">
+        <button class="def-button" id="post-button">+</button>
+    </a>
+    <div class="main">
+        <div class="navbar">
+            <a class="def-button" href="about.html">
+                about
+            </a>
+
+            <a class="def-button" href="gallery.html">
+                gallery
+            </a>
+            <a class="def-button" href="blog.html">
+                blog
+            </a>
+
+        </div>
+
+        <div id="p-stream" class="post-stream">
+
+            <div class="post">
+                <div class="info">
+                    <div class="user">
+                        <div class="profile-pic">
+                            <img src="img/gray-empty-cat-img.jpg" alt="">
+                        </div>
+
+                        <div class="username">Anonymous</div>
+                    </div>
+                </div>
+
+                <img class="post-image" src="img/concept-art/c1/088_Sky.jpeg" alt="">
+
+                <div class="post-content">
+                    <div class="reactions">
+                        <!-- like png -->
+                        <img id="h" class="post-icon" onclick="toggleLike()" src="img/icon-png/like.png" alt="">
+                        <img id="hf" class="post-icon hidden" onclick="toggleLike()" src="img/icon-png/like-filled.png"
+                            alt="">
+                        <!-- comment png -->
+                        <!-- <img class="post-icon comment-png" src="img/icon-png/comment.png" alt=""> -->
+                    </div>
+                </div>
+                <div class="text-content">
+                    <p class="likes">[NUM] like(s)</p>
+                    <p class="description">POST CAPTION</p>
+                    <div class="delete">
+                        <button class="delete-button">delete</button>
+                    </div>
+                </div>
+
+                <div class="comment-input">
+                    <form action="">
+                        <div class="input-box">
+                            <input type="text" placeholder="What comment would you like to leave?" id="comment"
+                                name="comment">
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <div class="comment-stream">
+                    <dl id="comment-list">
+                        <dt>
+                            <div class="comment-pic">
+                                <img src="img/gray-empty-cat-img.jpg" alt="user profile picture">
+                            </div>
+                            <div class="comment-box">
+                                <div class="comment-user">username</div>
+                                <div class="comment-content">hiiiii</div>
+
+                            </div>
+
+                        </dt>
+
+
+                    </dl>
+
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- end post-stream -->
+
+    </div>
+
+    <div class="bottom">
+        <hr>
+
+        <!-- Footer -->
+        <div class="footer ">
+            <div class="icons">
+                <a class="icon facebook" href="https://www.facebook.com/thatskygame/">
+                    <img src="img/logos/facebook-blue.png" alt="">
+                </a>
+                <a class="icon twitter" href="https://twitter.com/thatskygame?lang=en">
+                    <img src="img/logos/twitter-blue.png" alt="">
+                </a>
+                <a class="icon instagram" href="https://www.instagram.com/thatskygamejp/">
+                    <img src="img/logos/instagram-blue.png" alt="">
+                </a>
+                <a class="icon discord" href="https://discord.com/invite/thatskygame">
+                    <img src="img/logos/discord-blue.png" alt="">
+                </a>
+            </div>
+            <div class="bottom-text">
+                <p class="tgc">University of Southern California &copy; 2023</p>
+            </div>
+        </div>
+    </div>
+    <script src="blog.js"></script>
+    <script src="detailedPost.js"></script>
+    <script>
+        
+        addComment("username", "test");
+
+    </script>
+
+</body>
+
+</html>

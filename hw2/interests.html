@@ -1,0 +1,485 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Interests | Sky: Children of the Light</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header-img {
+            margin: 0px;
+
+        }
+
+        #header {
+            width: 100%;
+            background-color: thistle;
+            overflow: hidden;
+            /* display: block; */
+            height: 450px;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 450px;
+            background-image: url("img/6_Vault005\ copy.png");
+            background-size: cover;
+
+        }
+
+        body {
+            color: black;
+            background-color: #07061a;
+            padding: 0px;
+            /* background-image: url("img/IMG_6392.JPG");
+    background-size: cover; */
+            line-height: 19pt;
+        }
+
+        h2 {
+            line-height: 35pt;
+        }
+
+        p {
+            line-height: 12pt;
+            margin-bottom: 15px;
+        }
+
+        #footer {
+            width: 100%;
+            /* background-color: #212359; */
+            background-color: #3d3d54;
+            height: 50px;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            line-height: 50px;
+        }
+
+        #main {
+            width: 1000px;
+            height: auto;
+            background-color: rgb(170, 179, 205);
+            margin: auto;
+
+
+        }
+
+        #sidebar {
+            background-color: rgb(111, 126, 173);
+            width: 28%;
+            /* height: auto; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10px
+        }
+
+        #sidebar img {
+            border-radius: 2.5px;
+        }
+
+        #sidebar a {
+            font-size: 0.775em;
+        }
+
+        a {
+            color: rgb(69, 90, 176);
+        }
+
+        #content {
+            /* background-color: lightgreen; */
+            width: 72%;
+            padding: 10px;
+            /* height: auto; */
+        }
+
+        #middle {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #app-icon {
+            width: 200px;
+            height: auto;
+            float: right;
+            padding: 10px;
+        }
+
+        #forest-img {
+            float: left;
+            width: 375px;
+            height: auto;
+            padding-right: 15px;
+        }
+
+        #aurora-img {
+            width: 375px;
+            height: auto;
+            float: right;
+            padding-left: 20px;
+        }
+
+        /* container = #a1, image = #a1 img, middle = #caption */
+        /* images */
+        #a1 {
+            position: relative;
+            width: 100%;
+
+        }
+
+        #a1 img {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+
+        }
+
+        #caption {
+            transition: 0.5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #4682B4;
+            padding: 12.5px;
+            border-radius: 3px;
+        }
+
+        #a1:hover img {
+            opacity: 0.3;
+
+        }
+
+        #a1:hover #caption {
+            opacity: 1;
+        }
+
+        /* image 2 */
+        #a2 {
+            position: relative;
+            width: 100%;
+
+        }
+
+        #a2 img {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+
+        }
+
+        #c2 {
+            transition: 0.5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #212359;
+            padding: 12.5px;
+            border-radius: 3px;
+        }
+
+        #a2:hover img {
+            opacity: 0.3;
+
+        }
+
+        #a2:hover #c2 {
+            opacity: 1;
+        }
+
+        /* image 3 */
+        #a3 {
+            position: relative;
+            width: 100%;
+
+        }
+
+        #a3 img {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+
+        }
+
+        #c3 {
+            transition: 0.5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #6c4065;
+            padding: 12px;
+            border-radius: 3px;
+        }
+
+        #a3:hover img {
+            opacity: 0.3;
+
+        }
+
+        #a3:hover #c3 {
+            opacity: 1;
+        }
+
+
+        /* image 4 */
+        #a4 {
+            position: relative;
+            width: 100%;
+
+        }
+
+        #a4 img {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+
+        }
+
+        #c4 {
+            transition: 0.5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #3d6e7d;
+            padding: 12px;
+            border-radius: 3px;
+        }
+
+        #a4:hover img {
+            opacity: 0.3;
+
+        }
+
+        #a4:hover #c4 {
+            opacity: 1;
+        }
+
+        #menu {
+            height: 50px;
+            background-color: white;
+            /* box-shadow: 5px 5px 5xp black; */
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #menu a {
+            color: black;
+            z-index: 1;
+            text-decoration: none;
+            /* background-color: cornflowerblue; */
+            height: 50px;
+            width: 250px;
+            /* display: block; */
+
+            text-align: center;
+            line-height: 50px;
+            /* border-bottom: 3px solid white; */
+        }
+
+        #menu a:hover {
+            transition: 0.34s ease;
+            /* border-bottom: 3px solid #0a092c; */
+            background-color: #0a092c;
+            color: white;
+            /* color: #171365; */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Sky: Children of the Light</h1>
+        <!-- <img id = "header-img" src="img/6_Vault004.png" alt=""> -->
+
+    </div>
+
+    <div id="menu">
+        <a href="interests.html">Home</a>
+        <a href="interests.html#description">Description</a>
+        <a href="#experience">Experience</a>
+        <a href="#aurora">Current Season</a>
+    </div>
+
+
+    <div id="main">
+
+        <div id="middle">
+            <div id="sidebar">
+                <!-- <div id = albums> -->
+                <div id="a1">
+                    <img class="album" src="img/Sky-Vol1.jpg" alt="Sky OST Vol.1">
+                    <div id="caption">
+                        <div><a style="color: white"
+                                href="https://open.spotify.com/album/08FOLGOA3hwtHPFd6hu7fh?si=UWDcK50cSqW8cmx8ulVf3Q">Sky
+                                OST Vol. 1</a></div>
+                    </div>
+                </div>
+
+                <div id="a2">
+                    <img class="album" src="img/Sky-Vol2.jpg" alt="Sky OST Vol.2">
+                    <div id="c2">
+                        <div><a style="color: white"
+                                href="https://open.spotify.com/album/0tssLoo2z1VxWPlng7P96b?si=Pc4Oh2SUQfqOp3zik5U3CA">Sky
+                                OST Vol. 2</a></div>
+                    </div>
+                </div>
+
+                <div id="a3">
+                    <img class="album" src="img/Sky-Vol3.jpg" alt="Sky OST Vol.3">
+                    <div id="c3">
+                        <div><a style="color: white"
+                                href="https://open.spotify.com/album/4HOm4xpJDtx1rGqY6UVFn5?si=Lmxlxd5ITGWeXU6trmnIRw">Sky
+                                OST Vol. 3</a></div>
+                    </div>
+                </div>
+
+                <div id="a4">
+                    <img class="album" src="img/ost-vol-444.png.webp" alt="Sky OST Vol.4">
+                    <div id="c4">
+                        <div><a style="color: white"
+                                href="https://open.spotify.com/album/2bjQRwNfr8QO9ssEr1AZTk?si=BN3FQQlBS5a842LFEGhcvA">Sky
+                                OST Vol. 4</a></div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+            <div id="content">
+                <div id="description">
+                    <h2>Description</h2>
+                    <img id="app-icon" src="img/AppIcon_07_Belonging7.jpg" alt="sky app icon">
+                    <p>Welcome to the enchanting world of Sky,
+                        a pleasant puzzle-adventure game. Hand in hand,
+                        take flight through the beautifully-animated
+                        kingdom across seven realms and create enriching
+                        memories with other players. Spread Light through
+                        the desolate kingdom and return the fallen Stars
+                        to their constellations.</p>
+
+                    <!-- <img src="img/SkyLogo4000x4000_WhiteOL.png" alt=""> -->
+
+                    <p>If you have played any of thatgamecompany's (TGC)
+                        previous games, you will be familiar with the soothingly
+                        quiet and simple game style, with beautiful music and equally
+                        breathtaking graphics. The minimalistic controls allow you
+                        to go with the flow of the game, finding the story within
+                        your surroundings, maybe even meeting other real-time players
+                        and communicating with chirps and Expressions. A nice, pleasant,
+                        and simple adventure-based game. Sure there are some sorts of
+                        danger at times, but for the most part, no enemies, no blood,
+                        no battle, all in all, no violence. It's a game to sit back,
+                        relax, and enjoy playing.</p>
+
+                </div>
+                <!-- img should be WRAPPED -->
+                <div id="experience">
+                    <h2>Experience</h2>
+                    <p>In the kingdom of Sky, you will experience:</p>
+                    <p><strong>Spirits: </strong> Relive <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Ancestors#Spirits">spirits'</a>
+                        memories throughout the land and return them to their realms' temples to be rewarded with their
+                        unique expressions and see the items they offer you in their constellations.</p>
+                    <p><strong>Expressions: </strong>Learn <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Expressions">expressions</a> from
+                        spirits and use them to communicate with others. Upgrade these expressions to unlock more
+                        creative and elaborate animations.</p>
+                    <img id="forest-img" src="img/3_Forest009.png" alt="two sky kids in the hidden forest">
+                    <p><strong>Friendship and Forging Candles: </strong>Make <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Making_Friends">friends</a> with
+                        players around the globe! Collect light to forge <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Pieces_of_Light">candles</a> (Sky's
+                        in game currency), offer them to upgrade your friendship to unlock special expressions to share
+                        between one another, and use them to send the gift of a heart to strengthen your connections
+                        with others.</p>
+                    <p><strong>Cosmetics: </strong> Grow your friendship with the spirits you’ve encountered and offer
+                        them candles and hearts to be rewarded with items to enhance your <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Cosmetics">appearance</a>.</p>
+
+                    <p><strong>Explore the Skies:</strong> Collect scattered <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Children_of_Light">Children of
+                            Light</a> throughout every Sky <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Realms">Realm</a> to increase your
+                        cape power and soar to greater heights! Dive into the clouds to instantly recharge your cape.
+                        Interacting with others will also restore your energy.</p>
+                    <p><strong>Daily Quests:</strong> Complete daily quests to receive up to four candles per day.
+                        Candles are used to upgrade friendships and abilities with spirits and other players.</p>
+                    <p><strong>Seasons and Events: </strong>Celebrate new spirits and special occasions with other
+                        players! <a href="https://sky-children-of-the-light.fandom.com/wiki/Cosmetics">Adventure
+                            seasons</a> bring unique spirits, expressions, and collectibles to reflect the world of Sky,
+                        and <a href="https://sky-children-of-the-light.fandom.com/wiki/Special_Events">special
+                            events</a> offer an assortment of playful and colorful items to revel in the festive mood.
+                    </p>
+                    <p><strong>Traveling Spirits: </strong>Past adventure seasons do not repeat, but the spirits and
+                        their unique cosmetics will return for a <a
+                            href="https://sky-children-of-the-light.fandom.com/wiki/Traveling_Spirits">limited
+                            duration</a> in case you missed them during their initial debut.</p>
+                    <p><strong>Graphics: </strong>Enjoy stunning graphics at your fingertips. Sky supports several
+                        graphics settings to suit your preferences whether you play in docked mode (TV mode) or handheld
+                        mode.</p>
+
+                </div>
+
+                <div id="aurora">
+                    <h2>Season of AURORA</h2>
+                    <p>This season was the second collaborative season released by thatgamecompany, collaborating with
+                        AURORA. Each Spirit brought a story written by AURORA, told through her voice in Seasonal Quests
+                        to weave the imagination of her best-known songs into the events that once unfolded in the
+                        realms. Complete the Seasonal Quests to reveal the colors and elements waiting to be restored
+                        and awaken a spirit of Light from the world's distant past.</p>
+                    <img id="aurora-img" src="img/SoAurora-Promo-image-wide.png"
+                        alt="season of aurora promotional image">
+                    <p>The AURORA Concert (also referred to as The Musical Voyage) is a special event that first
+                        occurred on December 8 at 20:30 PST (UTC-8) and lasted approximately 50 minutes. For the first
+                        time ever in gaming history, Sky delivered a musical journey where players can feel the wave of
+                        emotions from thousands of other players on the same screen, at the same time. This hour long
+                        virtual concert premieres 'Exhal, Inhale', 'Runaway', 'All is Soft Inside', 'Warrior', 'The
+                        Seed', 'Through the Eyes of a Child', and 'Queendom'. Players had the ability to chat with
+                        players in the same group or row and new expression emojis were available at the bottom of the
+                        screen for the duration of the event: Waving Light, Heart, Shock, and Cry expressions.</p>
+
+                    <p>After the concert, all pre-concert activities are still available to players, with the exception
+                        that the Bonfires and Campfire Snack Kits are missing. On top of these, players can also find
+                        AURORA inside the sound bath after the concert. AURORA is seen in the form of sparkles, idly
+                        standing and swinging her arms. She will offer a hug when a player approach her, and speaks
+                        after the hug: "Thank you so much for the love! You are so beautiful. And remember to give some
+                        of that love to yourself too." </p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer">University of Southern California &copy; 2023</div>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fonts, Position Property</title>
+		<link rel="stylesheet" href="shared.css">
+	<style>
+
+		#thumbnails {
+			display: flex;
+		}
+		.img-container {
+			background-color: #CCC;
+			margin: 10px;
+			width: 180px;
+			height: 180px;
+
+			overflow: hidden;
+			position: relative;
+		}
+
+		.img-container > img {
+			height: 100%;
+			width: auto;
+		}
+
+		.img-container > .width100 {
+			width: 100%;
+			height: auto;
+		}
+
+		.overlay {
+			color: #FFF;
+			/* background-color: #000; */
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+
+			text-align: center;
+			padding-top: 80px;
+
+			background-color: rgba(0, 0, 0, 0.6);
+			display: none;
+		}
+
+		.img-container:hover .overlay{
+			display: block;
+		}
+
+
+	</style>
+
+</head>
+<body>
+
+
+	<ul id="navbar">
+
+		<li><a href="">Menu 1</a></li>
+		<li>
+			<a href="">Menu 2</a>
+			<ul>
+				<li><a href="">Sub-menu 1</a></li>
+				<li><a href="">Sub-menu 2</a>
+					<ul>
+						<li><a href="">Sub-sub-menu 1</a></li>
+						<li><a href="">Sub-sub-menu 2</a></li>
+						<li><a href="">Sub-sub-menu 3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a id = "active-nav" href="">Lecture 3a</a></li>
+		<li><a href="lecture_03b.html">Lecture 3b</a></li>
+		
+	</ul> <!-- navbar -->
+
+
+	<div id="main">
+
+		<h1>Fonts, Position Property</h1>
+
+		<h2>Lorem ipsum dolor</h2>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet urna at molestie tempor. Aenean sapien quam, molestie ac eros at, venenatis interdum diam. Proin tempor sollicitudin est. Phasellus varius, felis vel rutrum sodales, felis purus rutrum justo, et vehicula sem justo ac erat. Ut sem orci, aliquam ut nulla vel, congue rutrum nibh. Cras pellentesque interdum orci ut auctor. Cras interdum velit at velit lobortis auctor.</p>
+
+		<p>Nam et ligula nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla a metus sed elit rutrum consectetur. Nullam id nunc eget mi tristique interdum at sit amet ex. Morbi bibendum risus ut orci dapibus posuere. Quisque ut sem varius, hendrerit nulla sit amet, blandit purus. Ut aliquet lorem eu facilisis pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+		<p>Nunc a rutrum ex. Curabitur dapibus nec neque nec porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pretium lacus dui, mollis condimentum dui tincidunt a. Integer eget molestie nunc. Vivamus dapibus mauris sit amet nulla vulputate, vel bibendum massa placerat. Donec at felis posuere, tempor lectus nec, sagittis lacus. Pellentesque eu purus porta, elementum quam eget, elementum ex. Cras euismod arcu nisi, eget hendrerit magna feugiat eu. Proin accumsan mattis massa, consectetur vehicula erat molestie quis. Nam ac suscipit libero, quis malesuada dolor. Donec sit amet risus sem. Morbi eleifend nisl quis hendrerit euismod. Suspendisse potenti. Sed lacinia mattis justo quis luctus. Nam vel convallis turpis, id lobortis massa.</p>
+
+		<h2>Ut interdum orci</h2>
+
+		<div id="thumbnails">
+
+			<div class="img-container">
+				<img src="img/img_1.jpg" alt="USC Village">
+
+				<div class = "overlay">USC Village</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img src="img/img_2.jpg" alt="Tutor Campus Center">
+				<div class = "overlay">Tutor Campus Center</div>
+			</div> <!-- .img-container -->
+
+			<div class="img-container">
+				<img class = "width100" src="img/img_3.jpg" alt="Tommy Trojan">
+				<div class = "overlay">Tommy Trojan</div>
+			</div> <!-- .img-container -->
+
+		</div>		
+
+		<h2>Mauris tempor nec</h2>
+
+		<p>Mauris tempor nec odio eu laoreet. Quisque eu dui eros. Maecenas convallis cursus urna, non iaculis augue finibus et. Nam auctor aliquet augue non egestas. Quisque nec mi dictum, convallis odio eget, imperdiet lectus. Aenean vitae diam nec erat iaculis tincidunt. Aliquam vestibulum hendrerit leo, sit amet scelerisque turpis ultrices eu. Nam eu nunc sit amet ipsum faucibus malesuada quis eu arcu. Cras et laoreet risus, quis placerat nulla. Curabitur lobortis lectus in orci mattis ullamcorper. Vestibulum ultricies sodales mollis.</p>
+
+		<p>Nulla sed aliquam lacus. Morbi lacinia efficitur metus, et varius mauris tempus ac. Integer in dolor augue. Donec et aliquam nisi. Suspendisse sit amet pulvinar nisi. Mauris varius magna a enim porta efficitur. Donec at consectetur risus, at facilisis massa. Quisque laoreet nulla justo, nec efficitur massa dignissim non. Nunc feugiat dictum quam. Morbi vehicula luctus nisl, in consequat dolor blandit sed. Nullam posuere tellus ac massa sagittis, sed condimentum risus fermentum. Phasellus quis odio nisl. Pellentesque maximus porta purus, sed vulputate arcu luctus at. Proin eget magna ac odio pharetra egestas. Quisque at interdum tellus. Sed iaculis hendrerit velit, iaculis iaculis nisi maximus quis.</p>
+
+		<h2>Morbi a metus</h2>
+
+		<p>Morbi a metus urna. Proin gravida sem vitae turpis porta, sed pellentesque nisi faucibus. Integer placerat dictum sodales. Morbi rhoncus dictum orci, vel dictum nisl luctus vel. Donec fringilla imperdiet eros, sit amet tempus velit interdum at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam vehicula varius tincidunt.</p>
+
+		<p>Cras ornare dolor vulputate tempus interdum. Fusce condimentum elit ut lectus tempor dictum. Aenean eu posuere enim. Quisque fringilla mollis ultrices. Vestibulum magna turpis, mattis non est quis, vehicula condimentum libero. Cras nec sapien dapibus, consequat enim sit amet, mattis libero. Fusce suscipit ullamcorper iaculis. Aenean vestibulum imperdiet cursus. Vestibulum vel magna imperdiet ligula convallis ultrices.</p>
+
+		<p>Integer tempor bibendum ex in dignissim. Integer pharetra elit eros, sed ultricies nulla tincidunt eu. Mauris eleifend purus at sodales mattis. Suspendisse rutrum velit nec dictum venenatis. Aenean nulla libero, vehicula sit amet rutrum vitae, lacinia et odio. Ut consectetur volutpat dui, vitae dictum sem. Proin blandit et dui et rutrum. Nulla pharetra neque odio, nec consequat leo suscipit eu. Etiam eu augue sed nisi feugiat viverra. Ut pulvinar risus ultrices malesuada aliquet. Nullam ornare placerat mollis. Donec sit amet dolor et diam volutpat aliquam. Quisque dictum egestas enim sed fringilla. Aliquam pellentesque dui ac dolor venenatis, sed porttitor urna fringilla.</p>
+
+		<h2>Mauris a imperdiet</h2>
+
+		<p>Mauris a imperdiet nisl. Duis commodo leo dui, condimentum pulvinar velit blandit lobortis. Vestibulum sit amet vehicula augue, laoreet pharetra mi. Nunc consectetur tortor mi, id interdum magna aliquet nec. Nullam egestas arcu dui, ac viverra ligula lacinia at. Curabitur erat dui, hendrerit et velit quis, mollis tempus sapien. Nunc consectetur, tortor et tincidunt finibus, turpis nisi aliquet mauris, quis auctor neque neque a magna. Phasellus a imperdiet nibh, sit amet tincidunt sem. Pellentesque ornare rhoncus nibh, a blandit erat. Fusce imperdiet bibendum diam, sed congue purus imperdiet malesuada.</p>
+
+		<p>Nam rutrum ac est ut faucibus. Etiam aliquet nisl ultricies nunc aliquam, id rutrum mauris porttitor. Proin eu turpis at odio cursus accumsan. Nunc est purus, euismod eu lectus at, tristique auctor magna. Vestibulum a dignissim velit. Sed odio ligula, condimentum eget metus sit amet, pellentesque iaculis dui. Donec justo risus, pulvinar in augue nec, ornare tincidunt odio. Sed dui ligula, pellentesque in condimentum vel, semper eget justo. Nullam in turpis elit. Nulla sollicitudin interdum hendrerit. In quis congue tellus.</p>
+
+		<p>Praesent eget tempor odio. Duis molestie pretium risus et feugiat. Aliquam nec urna ac purus congue hendrerit in ut dui. Ut scelerisque libero at quam interdum, vel finibus risus malesuada. Integer pulvinar sapien velit, nec maximus dolor interdum in. Quisque nisi neque, posuere in semper at, mollis eget leo. Praesent dignissim ultricies felis vel tempor. Ut ut varius justo, at suscipit nibh. Pellentesque eget orci non diam ornare tempus. Maecenas dolor dui, fringilla nec ante eu, fringilla vestibulum lectus. Sed egestas efficitur consectetur. Maecenas enim quam, ornare sit amet blandit in, condimentum eget diam. Maecenas quis commodo ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus quam feugiat nisi consequat, porta pretium odio dapibus. Sed tempus erat in lacus feugiat, et porta nibh sollicitudin.</p>
+
+		<p>Aenean vitae lacinia arcu, a ultricies mi. Sed iaculis nulla nunc, et mollis nunc euismod quis. In ullamcorper interdum mi, sit amet pharetra ipsum. Aenean ut blandit mauris. Proin ut lectus quis augue efficitur blandit. Aliquam erat volutpat. Curabitur ultrices, arcu sit amet malesuada sodales, turpis massa lobortis nibh, vel pretium dolor tortor id quam. Morbi vulputate risus et neque mollis feugiat.</p>
+
+	</div> <!-- #main -->
+
+</body>
+</html>

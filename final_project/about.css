@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #3c4756; */
+    background-color: rgb(9, 13, 51);
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.center {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    background-image: url("img/defaultpg/e8fe8d9802647ecbf17138470e329a45.jpeg");
+    /* background-image: url("img/concept-art/c1/136_Sky.jpeg"); */
+    background-size: cover;
+    text-align: center;
+    
+}
+
+.center img {
+    margin-top: 100px;
+}
+
+.center h4 {
+    position: relative;
+    bottom: 60px;
+    
+}
+
+.center span {
+    position: relative;
+    bottom: 90px;
+}
+.contents {
+
+
+    width: 200%;
+    background-color: rgb(9, 13, 51);
+    box-shadow: 10px -140px 60px rgb(9, 13, 51);
+
+}
+
+.icon-img {
+    width: 100px;
+    height: auto;
+    /* margin-top: 100px; */
+    margin-bottom: 50px;
+}
+
+.soul-img {
+    width: 200px;
+    height: auto;
+    /* margin-top: 100px; */
+    /* margin-bottom: 50px; */
+}
+
+.manta {
+    position: relative;
+    bottom: 200px;
+}
+
+.quote .banner, .quote div{
+    width: 90%;
+    
+}
+iframe {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    min-width: 600px;
+    height: 450px;
+    width: 25%;
+    
+}
+
+.sum {
+    width: 30%;
+    text-align: center;
+    margin: 2%;
+    letter-spacing: .05em;
+}
+
+.fade {
+    background-color: rgb(18, 31, 92);
+    height: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 10px 90px rgb(18, 31, 92);
+    position: relative;
+    top: 20px;
+    
+}
+.tut-title {
+    position: relative;
+    font-size: 2em;
+    font-family: hanoble;
+    color: white;
+    left: 15%;
+    letter-spacing: .1em;
+    margin-bottom: 15px;
+    
+}
+
+.tut-desc {
+    
+    position: relative;
+    left: 15%;
+}
+
+.tut {
+    background-color: rgb(18, 31, 92);
+    height: auto;
+    padding: 2.5%;
+}
+
+
+
+span {
+    font-family: hanoble;
+    color: #8bacda;
+    letter-spacing: .025em;
+
+}
+
+.main-desc {
+    min-width: 550px;
+    width: 35%;
+}
+
+.quote{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 75px;
+}
+
+.underline {
+    text-decoration: underline;
+   
+}
+p {
+    line-height: 1.5;
+    color: white;
+    width: 80%;
+}
+
+h2 {
+    margin-bottom: 0;
+    color: white;
+    
+}
+
+h4 {
+    color: white;
+    font-size: 3.5em;
+    /* font-family: hanoble, sans-serif; */
+    font-family: abigate, sans-serif;
+    letter-spacing: .7rem;
+    
+}
+
+h5 {
+    color: white;
+    font-size: 1.5em;
+    /* font-family: hanoble, sans-serif; */
+    font-family: abigate, sans-serif;
+    letter-spacing: .3rem;
+    margin-bottom: 0;
+}
+
+.platforms {
+    display: flex;
+    flex-direction: row;
+}
+.logo-platform {
+    /* background-color: orange; */
+    height: 75px;
+    width: 75px;
+    margin: 50px;
+}
+
+
+.header-banner {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    /* background-color: pink; */
+
+    color: white;
+    background-image: url("img/concept-art/c1/136_Sky.jpeg");
+    background-size: cover;
+}
+
+.header-description {
+    /* background-color: pink; */
+    width: 45%;
+    min-width: 600px;
+   
+    position: absolute;
+    top: 65%;
+    left: 4%;
+}
+
+.contents {
+    
+    /* background-color: thistle; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.summary {
+    /* background-color: pink; */
+    width: 60%;
+    min-width: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2%;
+    
+}
+
+.kids-img {
+    /* background-color: pink; */
+    height: 400px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.kids-img > img {
+    /* background-color: blue; */
+    height: 100%;
+    width: auto;
+}
+
+
+hr {
+    overflow: visible; /* For IE */
+    padding: 0;
+    border: none;
+    border-top: medium double white;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+hr:after {
+    content: "✧";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1em;
+    padding: 0 .75em;
+    background: rgb(9, 13, 51)
+}
+
+
+
+.logo-platform img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+
+.footer {
+    background-color: rgb(9, 13, 51);
+    padding-bottom: 1%;
+    width: 100%;
+}
+
+.icon {
+    background-color: rgb(9, 13, 51);
+}
+.bottom-text {
+    text-align: center;
+    color: white;
+    width:500px;
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.log-button img {
+    position: relative;
+    bottom: 15px;
+}

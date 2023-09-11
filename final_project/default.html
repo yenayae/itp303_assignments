@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ITP 303 Final Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="sitewide.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="default">
+        <div class="main">
+            <!-- logo -->
+            <div class="center">
+                <img src="img/sky logo.png" alt="sky logo">
+            </div>
+
+
+
+
+
+                <div class = "login">
+                    <form id = "login-form" action="">
+                        
+                        <div class="inputs">
+
+                                <input type="text" placeholder="Username" id = "username-login" name="username-login" required>
+
+                                <input type="text" placeholder="Password" id = "password-login" name="password-login" required>
+
+                        </div>
+                        <button class="submit-button" type="submit">Log In</button>
+                    </form>
+                    <div class = "su-redirect">
+                        New to Sky?
+                        <button onclick= "toggleRegistration()" >Sign up!</button>
+                    </div>
+
+                </div>
+
+                <div class = "signup hidden">
+                    <form id = "signup-form" action="">
+                        
+                        <div class="inputs">
+                                <input type="text" placeholder="Email" id = "email" name="email" required>
+                                <input type="text" placeholder="Username" id = "username-signup" name="username-signup" required>
+
+                                <input type="text" placeholder="Password" id = "password-signup" name="password-signup" required>
+
+                        </div>
+                        <button class="submit-button" type="submit">Sign Up</button>
+  
+
+
+                    </form>
+                    <div class = "su-redirect">
+                        Already have an account?
+                        <button onclick= "toggleRegistration()" >Log in</button>
+                    </div>
+                </div>
+
+   
+
+
+
+            
+        </div>
+
+        
+    </div>
+
+    <!-- Footer -->
+    <script src="default.js"></script>
+    <script>
+        
+        document.querySelector("#login-form").onsubmit = function () {
+            const username = document.querySelector("#username-login").value.trim();
+            const password = document.querySelector("#password-login").value.trim();
+
+            console.log(username + " " + password);
+            return false;
+        } 
+
+        document.querySelector("#signup-form").onsubmit = function () {
+            const email = document.querySelector("#email").value.trim();
+            const username = document.querySelector("#username-signup").value.trim();
+            const password = document.querySelector("#password-signup").value.trim();
+
+            console.log(email + " " + username + " " + password);
+            return false;
+        } 
+
+    </script>
+
+</body>
+
+</html>

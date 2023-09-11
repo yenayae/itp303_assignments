@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Transitions, Translation</title>
+
+	<link rel="stylesheet" href="shared.css">
+
+	<style>
+
+		h1{
+			color: #090;
+		}
+		
+
+		.clearfloat {
+			clear: both;
+		}
+		body {
+			margin: 0px;
+			margin-bottom: 200px;
+		}
+		.section {
+			margin-top: 50px;
+		}
+		.box {
+			background-color: #CCC;
+			width: 50px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+		}
+		#duration .container {
+			display: inline-block;
+			margin: 10px;
+			width: 150px;
+		}
+		#duration:hover .box {
+			width: 120px;
+			height: 120px;
+			background-color: #FC0;
+		}
+		#duration .container {
+			min-height: 120px;
+		}
+		#timing-function th {
+			text-align: right;
+			font-weight: normal;
+		}
+		#timing-function td {
+			padding: 10px 0px 10px 10px;
+		}
+		#timing-function table:hover .box {
+			width: 400px;
+		}
+		#delay .container {
+			display: inline-block;
+			margin: 10px;
+			width: 150px;
+		}
+		#delay:hover .box {
+			width: 120px;
+			height: 120px;
+			background-color: #FC0;
+		}
+		#delay .container {
+			min-height: 120px;
+		}
+		#transform .container {
+			display: inline-block;
+			margin: 10px;
+		}
+		#transform .box {
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+		}
+		#transform .box:hover {
+			background-color: #FC0;
+		}
+		#img-animation .container {
+			max-width: 600px;
+			position: relative;
+			overflow: hidden;
+		}
+		#img-animation img {
+			display: block;
+			width: 100%;
+		}
+		#img-animation .overlay {
+			background-color: rgba(0, 0, 0, 0.6);
+			color: #FFF;
+			font-size: 2em;
+			text-align: center;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+			padding-top: 150px;
+		}
+		#img-animation a {
+			text-decoration: none;
+			display: block;
+			background-color: #900;
+			color: #FFF;
+			width: 120px;
+			line-height: 40px;
+			text-align: center;
+			position: absolute;
+			bottom: 80px;
+			left: 0px;
+			right: 0px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#duration-400ms {
+			/* transition: width 1s;
+			transition: height 1s; */
+			/* transition:  width 1s, height 1s;
+			 */
+
+			transition: all 500ms;
+		}
+
+		#duration-1s {
+			transition: all 1s;
+		}
+
+		#duration-2s {
+			transition: all 2s;
+		}
+
+		#ease {
+			transition: all 1s ease;
+		}
+		#linear {
+			transition: all 1s linear;
+		}
+		#ease-in {
+			transition: all 1s ease-in;
+		}
+		#ease-out {
+			transition: all 1s ease-out;
+		}
+		#ease-in-out {
+			transition: all 1s ease-in-out;
+		}
+
+		#delay-0s {
+			transition: all 1s 0s;
+		}
+		#delay-1s {
+			transition: all 1s 1s;
+		}
+		#delay-2s {
+			transition: all 1s 2s;
+		}
+
+		#transform .box {
+			transition: all 1s;
+		}
+		#scale:hover {
+			transform: scale(3,2);
+			/* scale (width, height) */
+		}
+		#rotate:hover {
+			transform: (-90deg);
+			transform: rotate(720deg);
+		}
+		#translate:hover {
+			transform: translateX(50px);
+			transform: translateY(50px);
+			transform: translate(-150px, 50px);
+		}
+
+		#combined:hover {
+			transform: scale(2) rotate(180deg) translate(100px);
+		}
+
+		#img-animation .overlay {
+			transform: scale(2);
+			transition: all 1s;
+			opacity: 0;
+		}
+
+		#img-animation .container:hover .overlay{
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		#img-animation a {
+			transition: all 1s;
+			opacity: 0;
+		}
+
+		#img-animation .container:hover a {
+			opacity: 1;
+			transition: all 1s ease 1s;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<ul id="navbar">
+
+		<li><a href="">Menu 1</a></li>
+		<li>
+			<a href="">Menu 2</a>
+			<ul>
+				<li><a href="">Sub-menu 1</a></li>
+				<li><a href="">Sub-menu 2</a>
+					<ul>
+						<li><a href="">Sub-sub-menu 1</a></li>
+						<li><a href="">Sub-sub-menu 2</a></li>
+						<li><a href="">Sub-sub-menu 3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li><a href="lecture_03a.html">Lecture 3a</a></li>
+		<li><a id = "active-nav" href="">Lecture 3b</a></li>
+		
+	</ul> <!-- navbar -->
+
+	<div id="main">
+
+		<h1>Transitions, Transformations</h1>
+
+		<div id="duration" class="section">
+			<h2>Transition: Duration</h2>
+			<div class="container">
+				<div id="duration-500ms" class="box">500ms</div>
+			</div>
+			<div class="container">
+				<div id="duration-1s" class="box">1s</div>
+			</div>
+			<div class="container">
+				<div id="duration-2s" class="box">2s</div>
+			</div>
+		</div> <!-- #duration -->
+
+		<div id="timing-function" class="section">
+			<h2>Transition: Timing Function</h2>
+			<table>
+				<tr>
+					<th>Ease (default):</th>
+					<td>
+						<div id="ease" class="box"></div>
+					</td>
+				</tr>
+				<tr>
+					<th>Linear:</th>
+					<td>
+						<div id="linear" class="box"></div>
+					</td>
+				</tr>
+				<tr>
+					<th>Ease-in:</th>
+					<td>
+						<div id="ease-in" class="box"></div>
+					</td>
+				</tr>
+				<tr>
+					<th>Ease-out:</th>
+					<td>
+						<div id="ease-out" class="box"></div>
+					</td>
+				</tr>
+				<tr>
+					<th>Ease-in-out:</th>
+					<td>
+						<div id="ease-in-out" class="box"></div>
+					</td>
+				</tr>
+			</table>
+		</div> <!-- #timing-function -->
+
+		<div id="delay" class="section">
+			<h2>Transition: Delay</h2>
+			<div class="container">
+				<div id="delay-0s" class="box">0s</div>
+			</div>
+			<div class="container">
+				<div id="delay-1s" class="box">1s</div>
+			</div>
+			<div class="container">
+				<div id="delay-2s" class="box">2s</div>
+			</div>
+		</div> <!-- #delay -->
+
+		<div id="transform" class="section">
+			<h2>Transform</h2>
+			
+			<div class="container">
+				<div id="scale" class="box">Scale</div>
+			</div>
+			<div class="container">
+				<div id="rotate" class="box">Rotate</div>
+			</div>
+			<div class="container">
+				<div id="translate" class="box">Translate</div>
+			</div>
+			<div class="container">
+				<div id="combined" class="box">Combined</div>
+			</div>
+
+		</div> <!-- #transform -->
+
+		<div id="img-animation" class="section">
+			<h2>Image Animation</h2>
+			
+			<div class="container">
+				<img src="img/usc_village.jpg" alt="USC Village">
+				<div class="overlay">USC Village</div>
+				<a href="">Read More</a>
+			</div> <!-- .container -->
+
+		</div> <!-- #img-animation -->
+
+	</div><!-- #main -->
+
+</body>
+</html>

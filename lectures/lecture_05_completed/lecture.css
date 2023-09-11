@@ -1,0 +1,49 @@
+.color-box {
+	cursor: pointer;
+}
+
+.color-box:before{
+    content: "";
+    display: block;
+    padding-top: 100%;  /* initial ratio of 1:1*/
+}
+
+.color-box:nth-of-type(1) {
+	background-color: #000;
+	color: #FFF;
+}
+
+.color-box:nth-of-type(2) {
+	background-color: #FFF;
+}
+
+.color-box:nth-of-type(3) {
+	background-color: #CCC;
+}
+
+.color-box:nth-of-type(4) {
+	background-color: #777;
+}
+
+.color-box:nth-of-type(5) {
+	background-color: #FC0;
+}
+
+.color-box:nth-of-type(6) {
+	background-color: #900;
+}
+
+#kanye {
+	border: 1px solid #000;
+	max-width: 300px;
+	margin: auto;
+	display: block;
+} 
+
+#dom-section h3 {
+	cursor: pointer;
+}
+
+#dom-section h3:hover {
+	background-color: #CCC;
+}

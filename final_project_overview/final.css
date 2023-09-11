@@ -1,0 +1,45 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    
+}
+
+.header {
+    background-image: url();
+
+}
+
+img {
+    padding: 5px;
+    width: 450px;
+    height: auto;
+}
+.requirements {
+    background-color: lightgray;
+    width: 100%;
+
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+}
+.descriptions {
+    /* background-color: pink; */
+    width: 90% ;
+    
+}

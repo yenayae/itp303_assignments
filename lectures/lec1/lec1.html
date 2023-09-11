@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <title>ITP WEB DEV  </title>
+     <!-- CSS Specificity Order: ID, Class, tag -->
+     <style>
+         img {
+             /* only edit EITHER width or height only; set other as auto */
+             width : 200px;
+             height : auto;
+             float: right;
+             margin-left: 10px;
+             
+         }
+
+         /* use em (element multiplier) so font is relative to user settings */
+         em {
+             font-size: 1.5em;
+         }
+
+         h2 {
+             /* color formats */
+             /* color name ex. maroon, gold ; rbg ex. rgb (0 , 0, 0); hex ex. #000000  */
+             background-color: maroon;
+             color: gold;
+         }
+
+         #first {
+             color: pink;
+         }
+
+         .taken {
+             background-color: yellow;
+         }
+
+         /* if you want img to be part of site, use html; else if just a picture, use backgroundimage */
+         #header {
+             background-color: blue;
+             background-image: url();
+             height: 500px;
+
+             background-size: cover;
+             background-position: center;
+
+             color: #FFF;
+             text-align: center;
+             line-height: 500px;
+             text-shadow: 0px 0px 10px #000;
+
+             
+         }
+
+         #footer {
+             height: 50px;
+             text-align: center;
+             line-height: 50px;
+
+         }
+
+        #main {
+            width: 650px;
+            background-color: pink;
+
+            margin-left: auto;
+            margin-right: auto;
+
+            padding: 15px;
+
+
+        }
+
+        h1 {
+            margin : 0;
+        }
+        body {
+            
+        }
+     </style>
+    </head>
+<body>
+    <!-- one h1 tag per page -->
+    <div id = "header">
+        <h1>ITP Web Development</h1>
+    </div>
+   
+    <hr>
+
+    <div id = "main">
+    <h2>Program Overview   </h2>
+    <!-- remote image -->
+    <img src="https://logos-world.net/wp-content/uploads/2021/11/USC-Logo.png" alt="USC Logo">
+    <!-- local image -->
+    <!-- if you wana access previous folder, use ../ instead of img/ -->
+    <img src="img/USC-Logo.png" alt="USC Logo">
+
+
+    <!-- web safe images -->
+    <!-- graphics interchange format (GIF) ; supports animation but low res n quality -->
+    <!-- joint photographic experts group (jpeg) : small file size, lossy format, and not suitable for text or crisp -->
+    <!-- portable network graphics (PNG) ; support transparency, large file size for photos -->
+    <!-- scalable vector graphics (SVG) : scalable for screensizes, no complex images / photos -->
+    
+    <p>FIRST PARAGRAPH
+    </p>
+
+    <!-- id = "NAME", must be unique on page -->
+    <h2>Minor Requirements</h2>
+    <p id = "first">This text is <em>italicized</em>.</p>
+    <p id = "second">this text is <strong>bold</strong>.</p>
+    <!-- <em> italicized ; <strong> bold -->
+
+        <h3>required courses</h3>
+            <ul>
+                <li class = "taken">ITP 104</li>
+                <li>ITP 301</li>
+                <li>ITP 300</li>
+                <li>ITP 460</li>
+            </ul>
+        <h3>electives</h3>
+            <ul>
+                <li>ITP 302</li>
+                <li>ITP 404</li>
+                <li>ITP 405</li>
+                
+            </ul>
+
+    <h2>Resources</h2>
+    <ol>
+        <li><a href = https://itp.usc.edu>ITP Website</a></li>
+        <li><a href = https://www.usc.edu>USC Website</a></li>
+        <li>For questions, email <a href = "mailto:itp@usc.edu">itp@usc.edu </a></li>
+    </ol>
+    <!-- list tags: ol = ordered list (numbers), ul = unordered list (bullets), li = list items -->
+    <!-- anchor tags: <a href = (link)> NAME </a> -->
+    <!-- email hyperlink: href = "mailto: (email)" -->
+    <!-- open in another tab : target = "_blank" after href = (link)-->
+    <!-- image tags: <img src = "(image address)" alt = "USC Logo"> -->
+</div>
+<div id = "footer"> 
+    University of Southern California &copy; 2023
+</div>
+
+
+</body>
+
+
+</html>

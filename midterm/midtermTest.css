@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.star {
+    scale: 4.5;
+}
+
+.star-button {
+    height: 80%;
+    width: 80%;
+}
+
+
+#box {
+    font-size: 1em;
+    text-decoration: none;
+}
+
+@media (max-width:991px) {
+    #box {
+        font-size: 1em;
+        text-decoration: underline;
+    }
+}
+
+
+@media (max-width:767px) {
+    #box {
+        font-size: 2em;
+        text-decoration: none;
+    }
+}
+

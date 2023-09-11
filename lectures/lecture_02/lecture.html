@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Web Minor | ITP</title>
+
+	<style>
+		body {
+			margin: 0px;
+		}
+		h1 {
+			margin: 0px;
+		}
+		h2 {
+			color: #900;
+		}
+		#header {
+			background-image: url('img/web_dev.jpg');
+			height: 500px;
+			background-size: cover;
+			background-position: center;
+			color: #FFF;
+			font-size: 1.5em;
+			text-align: center;
+			line-height: 500px;
+			text-shadow: 0px 0px 10px #000;
+		}
+		#main {
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+
+			background-color: lightgreen;
+			padding: 15px;
+		}
+		#sidebar {
+			background-color: lightblue;
+			width: 150px;
+			padding: 15px;
+
+			border-left: 1px solid #000;
+			width: 149px;
+		}
+		#wrapper {
+			background-color: yellow;
+
+			display: flex;
+			flex-wrap: wrap;
+
+			/*
+				600px main + 150px sidebar
+			*/
+			width: 750px;
+			margin-left: auto;
+			margin-right: auto;
+
+			/*
+				750px 
+				+ 30px main padding
+				+ 30px sidebar padding
+			*/
+			width: 810px;
+
+			border-left: 1px solid #000;
+			border-right: 1px solid #000;
+		}
+		#footer {
+			background-color: #777;
+			color: #FFF;
+			text-align: center;
+			height: 50px;
+			line-height: 50px;
+			font-size: 0.8em;
+		}
+		#usc-logo{
+			width: 200px;
+			height: auto;
+			float: right;
+			margin-left: 15px;
+			margin-bottom: 15px;
+		}
+		#gallery {
+			display: flex;
+
+			align-items: flex-start;
+/*			flex-direction: column-reverse;*/
+			flex-wrap: wrap;
+		}
+		.thumbnail {
+			/*
+				600px / 4 images = 150px per image
+			*/
+/*			width: 150px;*/
+			height: auto;
+
+			margin: 5px;
+
+			/*
+				150px 
+				- 5px left margin
+				- 5px right margin
+				= 140px
+			*/
+			width: 140px;
+
+			border: 1px solid #000;
+
+			/*
+				140px
+				-1px left border
+				-1px right border
+			*/
+			width: 138px;
+			opacity: 0.7;
+		}
+		.thumbnail:hover {
+			opacity: 1;
+		}
+		#nav a {
+			text-decoration: none;
+			color: #444;
+
+/*			background-color: gold;*/
+
+			/*
+				810px / 5
+				= 162px per nav item
+			*/
+			width: 162px;
+			height: 50px;
+/*			display: block;*/
+
+			text-align: center;
+			line-height: 50px;
+			border-bottom: 2px solid #FFF;
+		}
+		#nav a:hover {
+			border-bottom: 2px solid #900;
+			color: #900;
+		}
+		#nav {
+			display: flex;
+			justify-content: center;
+
+			box-shadow: 0px 10px 15px #CCC;
+		}
+		.thumbnail + p {
+			text-align: center;
+/*			display: none;*/
+			visibility: hidden;
+		}
+		.thumbnail:hover + p {
+/*			display: block;*/
+			visibility: visible;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="header">
+		<h1>ITP Web Development</h1>
+	</div> <!-- #header -->
+
+	<div id="nav">
+		<a href="lecture.html">Home</a>
+		<a href="lecture.html#program-overview">Overview</a>
+		<a href="#minor-requirements">Requirements</a>
+		<a href="#image-gallery">Gallery</a>
+		<a href="#contact">Contact</a>
+	</div>
+
+	<div id="wrapper">
+		<div id="main">
+			<h2 id="program-overview">Program Overview</h2>
+
+			<img id="usc-logo" src="img/usc_logo.png" alt="USC Logo">
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et porta odio, vel condimentum sem. Nunc facilisis diam et neque fringilla, ac efficitur lectus sodales. Morbi cursus ac eros vitae condimentum. Duis laoreet maximus ligula non cursus. Nunc ultrices consectetur leo a dapibus. Etiam placerat, elit a vulputate tincidunt, nisi dui iaculis neque, ac gravida mi libero eget diam. Sed risus diam, ultricies ut scelerisque a, dignissim in lacus. Sed vestibulum lorem id pulvinar egestas. Curabitur tincidunt neque nibh, eu eleifend nisi pellentesque sed. Ut eu quam nec metus eleifend hendrerit ut eget purus. Suspendisse vitae neque varius, molestie felis eu, maximus sapien. Etiam tempus risus diam, eu efficitur nisl varius at.</p>
+
+			<p>Phasellus non porttitor sem. Duis eu lectus vitae ipsum finibus tempus sit amet vel lorem. Aenean sodales finibus augue et laoreet. Praesent hendrerit sem orci, lacinia sodales magna gravida ac. Aenean suscipit, augue eu tincidunt posuere, nulla tortor egestas ipsum, eu finibus velit quam vel sem. Pellentesque leo libero, placerat vel ultrices nec, hendrerit et velit. Vestibulum fermentum pulvinar augue, in consequat eros facilisis vel. Aenean convallis nisl et quam tincidunt, eu sodales metus faucibus. Praesent ac ante et neque mattis commodo. Aenean tristique nunc eget posuere fringilla.</p>
+
+			<h2 id="minor-requirements">Minor Requirements</h2>
+
+			<h3>Required Courses</h3>
+
+			<ol>
+				<li>ITP 104</li>
+				<li>ITP 301</li>
+				<li>ITP 304</li>
+				<li>ITP 460</li>
+			</ol>
+
+			<h3>Electives</h3>
+
+			<ol>
+				<li>ITP 310</li>
+				<li>ITP 404</li>
+				<li>ITP 405</li>
+			</ol>
+
+			<h2 id="image-gallery">Image Gallery</h2>
+
+			<div id="gallery">
+				<div class="img-container">
+					<img class="thumbnail" src="img/img_1.jpg" alt="USC Village">
+					<p>USC Village</p>
+				</div>
+				<div class="img-container">
+					<img class="thumbnail" src="img/img_2.jpg" alt="Tommy Trojan">
+					<p>Tommy Trojan</p>
+				</div>
+				<div class="img-container">
+					<img class="thumbnail" src="img/img_3.jpg" alt="VKC">
+					<p>VKC</p>
+				</div>
+				<div class="img-container">
+					<img class="thumbnail" src="img/img_4.jpg" alt="Fountain"> 
+					<p>Fountain</p>
+				</div>
+			</div> <!-- #Gallery -->
+				
+			<h2 id="contact">Contact</h2>
+
+			<p>For questions, email <a href="mailto:itp@usc.edu">itp@usc.edu</a>.</p>
+		</div> <!-- #main -->
+
+		<div id="sidebar">
+			<h2>Sidebar</h2>
+		</div> <!-- #sidebar -->
+	</div> <!-- #wrapper -->
+
+	<div id="footer">
+		University of Southern California &copy; 2022
+	</div> <!-- #footer -->
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Layout</title>
+	<style>
+		#left {
+			background-color: lightgreen;
+
+			width: 200px;
+		}
+		#right {
+			background-color: lightblue;
+
+			width: 200px;
+		}
+		#footer {
+			background-color: pink;
+		}
+		#wrapper {
+			background-color: yellow;
+			display: flex;
+
+			margin-left: auto;
+			margin-right: auto;
+
+			width: 400px;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="wrapper">
+		<div id="left">
+			<p>Left Column</p>
+			<p>Left Column</p>
+			<p>Left Column</p>
+		</div> <!-- #left -->
+
+		<div id="right">
+			<p>Right Column</p>
+		</div> <!-- #right -->
+	</div> <!-- #wrapper -->
+
+	<div id="footer">
+		Content Below Columns
+	</div> <!-- #footer -->
+
+</body>
+</html>

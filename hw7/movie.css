@@ -1,0 +1,50 @@
+#movie-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.image-place {
+    margin-right: 20px;
+    height: 425px;
+    width: 350px;
+    /* background-color: pink; */
+    overflow: hidden;
+    
+    /* position: relative; */
+    border-radius: 5px;
+
+}
+
+.movie-poster {
+    /* max-height: 100%;
+    widows: auto; */
+    max-width: 100%;
+    height: auto;
+
+   
+
+}
+.movie-info {
+    /* background-color: pink; */
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+
+
+}
+
+.movie-item {
+    margin-bottom: 15px;
+    padding-top: 2%;
+    /* background-color: blue; */
+    /* height: 425px; */
+}
+
+.movie-info > div {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}

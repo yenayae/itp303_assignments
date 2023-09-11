@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<meta name = "keywords" content = "HTML, CSS, ITP">
+	<meta name = "description" content = "ITP 303 Lecture on Meta Tags and Responsive Web Design">
+	<meta name = "viewport" content = "width=device-width, initial-scale = 1">
+	
+	<title>Meta Tag, Responsive Web Design</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0px;
+			padding-top: 50px;
+		}
+		#container, #nav {
+			width: 980px;
+			margin: auto;
+		}
+		#container {
+			border-right: 1px solid #777;
+			border-left: 1px solid #777;
+			display: flex;
+		}
+		#left {
+			width: 680px;
+			border-right: 1px solid #777;
+			padding-left: 14px;
+			padding-right: 15px;
+		}
+		#right {
+			width: 240px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		#thumbnails {
+			display: flex;
+		}
+		.thumbnail {
+			margin: 5px;
+			width: 160px;
+			height: 160px;
+			overflow: hidden;
+		}
+		.thumbnail img {
+			width: auto;
+			height: 100%;
+		}
+		.thumbnail .width-100 {
+			width: 100%;
+			height: auto;
+		}
+		#nav ul {
+			list-style: none;
+			margin: 0px;
+			padding: 0px;
+			display: flex;
+		}
+		#nav li {
+			background-color: #900;
+			width: 245px;
+			line-height: 50px;
+			text-align: center;
+		}
+		#nav li:hover {
+			background-color: #FC0;
+		}
+		#nav a {
+			display: block;
+			color: #FFF;
+			text-decoration: none;
+		}
+		#navbar {
+			background-color: #900;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			z-index: 1;
+		}
+		#footer {
+			background-color: #777;
+			color: #FFF;
+			text-align: center;
+			height: 50px;
+			line-height: 50px;
+			font-size: 0.8em;
+		}
+
+		body {
+			background-color: pink;
+		}
+		/* tablets */
+
+		@media (max-width: 991px) {
+			body {
+				background-color: lightblue;
+			}
+
+			#nav, #container, #left, #right {
+				width: auto;
+				border: none;
+			}
+
+			#container {
+				flex-direction: column;
+			}
+			.thumbnail {
+				width: 23%;
+				margin: 1%;
+			}
+
+		}
+
+		/* mobile */
+		@media (max-width: 767px) {
+			body {
+				background-color: yellow;
+				padding: 0;
+			}
+
+			#navbar {
+				position: static;
+			}
+
+			#nav ul {
+				flex-direction: column;
+			}
+			#nav li {
+				width: auto;
+			}
+
+			#thumbnails {
+				flex-direction: column;
+			}
+			.thumbnail {
+				width: 50%;
+				height: auto;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.thumbnail img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="navbar">
+
+		<div id="nav">
+
+			<ul>
+				<li><a href="">Menu 1</a></li>
+				<li><a href="">Menu 2</a></li>
+				<li><a href="">Menu 3</a></li>
+				<li><a href="">Menu 4</a></li>
+			</ul>
+
+		</div> <!-- #nav -->
+
+	</div> <!-- #navbar -->
+
+	<div id="container">
+
+	<div id="left">
+
+		<h1>Meta Tags, Responsive Web Design</h1>
+
+		<h2>Left Column</h2>
+
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut aliquet urna at molestie tempor. Aenean sapien quam, molestie ac eros at, venenatis interdum diam. Proin tempor sollicitudin est. Phasellus varius, felis vel rutrum sodales, felis purus rutrum justo, et vehicula sem justo ac erat. Ut sem orci, aliquam ut nulla vel, congue rutrum nibh. Cras pellentesque interdum orci ut auctor. Cras interdum velit at velit lobortis auctor.</p>
+
+		<p>Nam et ligula nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla a metus sed elit rutrum consectetur. Nullam id nunc eget mi tristique interdum at sit amet ex. Morbi bibendum risus ut orci dapibus posuere. Quisque ut sem varius, hendrerit nulla sit amet, blandit purus. Ut aliquet lorem eu facilisis pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+
+		<p>Nunc a rutrum ex. Curabitur dapibus nec neque nec porta. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut pretium lacus dui, mollis condimentum dui tincidunt a. Integer eget molestie nunc. Vivamus dapibus mauris sit amet nulla vulputate, vel bibendum massa placerat. Donec at felis posuere, tempor lectus nec, sagittis lacus. Pellentesque eu purus porta, elementum quam eget, elementum ex. Cras euismod arcu nisi, eget hendrerit magna feugiat eu. Proin accumsan mattis massa, consectetur vehicula erat molestie quis. Nam ac suscipit libero, quis malesuada dolor. Donec sit amet risus sem. Morbi eleifend nisl quis hendrerit euismod. Suspendisse potenti. Sed lacinia mattis justo quis luctus. Nam vel convallis turpis, id lobortis massa.</p>
+
+		<div id="thumbnails">
+
+			<div class="thumbnail">
+				<img src="img/img_1.jpg" alt="USC Village">
+			</div> <!-- .thumbnail -->
+
+			<div class="thumbnail">
+				<img src="img/img_2.jpg" alt="Tutor Campus Center">
+			</div> <!-- .thumbnail -->
+
+			<div class="thumbnail">
+				<img src="img/img_3.jpg" alt="Tommy Trojan" class="width-100">
+			</div> <!-- .thumbnail -->
+
+			<div class="thumbnail">
+				<img src="img/img_4.jpg" alt="VKC">
+			</div> <!-- .thumbnail -->
+
+
+
+		</div>
+
+		<p>Mauris tempor nec odio eu laoreet. Quisque eu dui eros. Maecenas convallis cursus urna, non iaculis augue finibus et. Nam auctor aliquet augue non egestas. Quisque nec mi dictum, convallis odio eget, imperdiet lectus. Aenean vitae diam nec erat iaculis tincidunt. Aliquam vestibulum hendrerit leo, sit amet scelerisque turpis ultrices eu. Nam eu nunc sit amet ipsum faucibus malesuada quis eu arcu. Cras et laoreet risus, quis placerat nulla. Curabitur lobortis lectus in orci mattis ullamcorper. Vestibulum ultricies sodales mollis.</p>
+
+		<p>Nulla sed aliquam lacus. Morbi lacinia efficitur metus, et varius mauris tempus ac. Integer in dolor augue. Donec et aliquam nisi. Suspendisse sit amet pulvinar nisi. Mauris varius magna a enim porta efficitur. Donec at consectetur risus, at facilisis massa. Quisque laoreet nulla justo, nec efficitur massa dignissim non. Nunc feugiat dictum quam. Morbi vehicula luctus nisl, in consequat dolor blandit sed. Nullam posuere tellus ac massa sagittis, sed condimentum risus fermentum. Phasellus quis odio nisl. Pellentesque maximus porta purus, sed vulputate arcu luctus at. Proin eget magna ac odio pharetra egestas. Quisque at interdum tellus. Sed iaculis hendrerit velit, iaculis iaculis nisi maximus quis.</p>
+
+	</div> <!-- #left -->
+
+	<div id="right">
+		<h2>Right Column</h2>
+
+		<p>Special characters: ö ü ä “ ”.</p>
+
+		<p>Morbi a metus urna. Proin gravida sem vitae turpis porta, sed pellentesque nisi faucibus. Integer placerat dictum sodales. Morbi rhoncus dictum orci, vel dictum nisl luctus vel. Donec fringilla imperdiet eros, sit amet tempus velit interdum at. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam vehicula varius tincidunt.</p>
+	</div> <!-- #right -->
+
+</div> <!-- #container -->
+
+<div id="footer">
+	University of Southern California &copy; 2018
+</div> <!-- #footer -->
+
+</body>
+</html>

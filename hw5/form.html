@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Registration Validation Form</title>
+    <meta name="description" content="USC ITP303 Registration Form">
+    <meta name="keywords" content="html css js form validation">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="form.css">
+
+
+    <style>
+        #sucessful-submit ul{
+            list-style: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- html -->
+    <div class="container">
+        <div class="row">
+            <h2 class="col-12 mt-5 mb-4">Registration Form</h2>
+
+            <div class="col-12">
+
+                <form id="signup-form">
+
+                    <div class="form-group row">
+                        <label for="first-name" class="col-sm-2 col-form-label">First Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="first-name" class="form-control" placeholder="First Name"
+                                id="first-name">
+
+                            <small id="first-name-error" class="form-text text-danger"></small>
+
+                        </div>
+                    <!-- </div> .form-group -->
+                    
+                    <!-- <div class="form-group row"> -->
+                        <label for="last-name" class="col-sm-2 col-form-label">Last Name:</label>
+                        <div class="col-sm-4">
+                            <input type="text" name="last-name" class="form-control" placeholder="Last Name"
+                                id="last-name">
+
+                            <small id="last-name-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="email" class="form-control" placeholder="ttrojan@usc.edu"
+                                id="email">
+
+                            <small id="email-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <label for="website" class="col-sm-2 col-form-label">Website:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="website" class="form-control" placeholder="https://www.tommytrojan.com"
+                                id="website">
+
+                            <small id="website-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="row mb-2">
+                        <div class="col-sm-8 offset-sm-2">
+                            <small class="form-text text-muted">Acceptable formats: 123 456 7890, 123-456-7890</small>
+                        </div>
+                    </div> <!-- .row -->
+
+                    <div class="form-group row">
+                        <label for="phone" class="col-sm-2 col-form-label">Phone:</label>
+                        <div class="col-sm-8">
+                            <input type="text" name="phone" class="form-control" placeholder="123-456-7890"
+                                id="phone">
+
+                            <small id="phone-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="row mb-2">
+                        <div class="col-sm-8 offset-sm-2">
+                            <small class="form-text text-muted">Password Requirements: Uppercase Letter, Lowercase Letter, Digit, Special Character !, @, #, $, %, ^, &, or *</small>
+                        </div>
+                    </div> <!-- .row -->
+
+                    <div class="form-group row">
+                        <label for="password" class="col-sm-2 col-form-label">Password:</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="password" class="form-control" placeholder="Password"
+                                id="password">
+
+                            <small id="password-error" class="form-text text-danger"></small>
+
+                        </div>
+                    </div> <!-- .form-group -->
+
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div> <!-- .col -->
+                    </div> <!-- .form-group -->
+
+                    <div class="col-12" id = "sucessful-submit">
+                        <div id = "submit-success"></div> 
+                        <ul >
+                            <li class="mt-2" id = "full-name"></li>
+                            <li id = "username"></li>
+                            <li id = "submitted-phone"></li>
+
+                            
+                        </ul>
+                    </div> <!-- .col -->
+
+                </form>
+            </div> <!-- .col -->
+        </div> <!-- .row -->
+    </div> <!-- .container -->
+
+
+
+    <!-- js -->
+    <script src="validation.js"></script>
+    <script>
+    document.querySelector("#signup-form").onsubmit = function () {
+        let validForm = true;
+
+        //firstname validation DONE
+        const firstName = document.querySelector("#first-name").value.trim();
+        // console.log(firstName);
+        if (/^$/.test(firstName)) {
+            validForm = false;
+            document.querySelector("#first-name-error").innerHTML = "First Name cannot be empty."
+        }
+
+        else if (!(/^[A-Z]{1,}[a-z]{1,}$/.test(firstName))) {
+            validForm = false;
+            document.querySelector("#first-name-error").innerHTML = "Invalid First Name."
+        }
+
+        else {
+            document.querySelector("#first-name-error").innerHTML = ""
+        }
+
+
+        //lastname validation DONE
+        const lastName = document.querySelector("#last-name").value.trim();
+        if (/^$/.test(lastName)) {
+            validForm = false;
+            document.querySelector("#last-name-error").innerHTML = "Last Name cannot be empty."
+        }
+
+        else if (!/^[A-Z]{1,}[a-z]{1,}$/.test(lastName)) {
+            validForm = false;
+            document.querySelector("#last-name-error").innerHTML = "Invalid Last Name."
+        }
+
+        else {
+            document.querySelector("#last-name-error").innerHTML = ""
+        }
+
+        //email validation
+        const email = document.querySelector("#email").value.trim();
+        if (/^$/.test(email)) {
+            validForm = false;
+            document.querySelector("#email-error").innerHTML = "Email cannot be empty."
+        }
+
+        else if (!/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)) {
+            validForm = false;
+            document.querySelector("#email-error").innerHTML = "Invalid email."
+        }
+
+        else if (!/usc\.edu$/.test(email)) {
+            validForm = false;
+            document.querySelector("#email-error").innerHTML = "Must be usc.edu email."
+        }
+
+        else {
+            document.querySelector("#email-error").innerHTML = ""
+        }
+
+
+
+        //website validation DONE
+        const website = document.querySelector("#website").value.trim();
+        if (/^$/.test(website)) {
+            validForm = false;
+            document.querySelector("#website-error").innerHTML = "Website cannot be empty."
+        }
+        
+        else if (!/https?:\/\//.test(website)) {
+            validForm = false;
+            document.querySelector("#website-error").innerHTML = "Must start with http:// or https://."
+        }
+        
+        else if (!/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&=]*)/.test(website)) {
+            validForm = false;
+            document.querySelector("#website-error").innerHTML = "Invalid URL."
+        }
+
+        else {
+            document.querySelector("#website-error").innerHTML = ""
+        }
+
+        //phone validation DONE
+        const phone = document.querySelector("#phone").value.trim();
+        if (/^$/.test(phone)) {
+            validForm = false;
+            document.querySelector("#phone-error").innerHTML = "Phone cannot be empty."
+        }
+
+        else if (!/^\d{3}-\d{3}-\d{4}$|^\d{3}\s\d{3}\s\d{4}$/.test(phone)) {
+            validForm = false;
+            document.querySelector("#phone-error").innerHTML = "Invalid phone format."
+        }
+        else {
+            document.querySelector("#phone-error").innerHTML = "";
+        }
+
+        //password validation DONE
+        const password = document.querySelector("#password").value.trim();
+        if (/^$/.test(password)) {
+            validForm = false;
+            document.querySelector("#password-error").innerHTML = "Password cannot be empty."
+        }
+
+        else if (!/\d{1}/.test(password) || !/[a-z]{1}/.test(password) || !/[A-Z]{1}/.test(password)
+                || !/!|@|#|\$|%|\^|&|\*/.test(password)) {
+            validForm = false;
+            document.querySelector("#password-error").innerHTML = "Insecure password."
+        }
+
+
+        else {
+            document.querySelector("#password-error").innerHTML = "";
+        }
+
+        if (validForm) {
+            
+            const indxAt = email.indexOf("@");
+            // console.log(indxAt);
+            const user = email.substring(0, indxAt);
+            // console.log(user);
+
+            document.querySelector("#submit-success").innerHTML = "<strong>Submission Successful!</strong>";
+            document.querySelector("#full-name").innerHTML = "<strong>Full Name: </strong>" + firstName + " " + lastName;
+            document.querySelector("#username").innerHTML = "<strong>Username: </strong>" + user;
+
+            if (/^\d{3}-\d{3}-\d{4}$/.test(phone)) {
+            document.querySelector("#submitted-phone").innerHTML = "<strong>Phone Number: </strong>" + phone;
+            }
+
+            else {
+                const submitPhone = phone.replace(/\s/g, '-');
+                // onsole.log(submitPhone)
+                document.querySelector("#submitted-phone").innerHTML = "<strong>Phone Number: </strong>" + submitPhone;
+            }
+
+        }
+        return false;
+
+    }  
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+.comment-stream dt {
+    width: 100%;
+    border-top: 1px solid #dfdfdf;
+    /* border-bottom: 1px solid #dfdfdf; */
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 15px;
+   
+
+    display: flex;
+    /* padding: 0; */
+}
+
+.comment-stream dl {
+    margin-bottom: 0;
+}
+
+.comment-pic {
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 3px;
+}
+
+.comment-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.comment-box {
+    /* background-color: pink; */
+    margin-left: 10px;
+    width: 100%;
+}
+.comment-user {
+    font-weight: bold;
+    margin-top: 5px;
+}
+.comment-content {
+    /* margin-top: 5px; */
+    width: 97%;
+    /* background-color: pink; */
+}
+
+input {
+    width:  95%;
+    height: 45px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #dfdfdf;
+    padding: 5px;
+}
+
+.comment-input {
+    margin: 0;
+    padding: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 100%;
+    
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* padding-left: 10px; */
+}
+
+form {
+    width: 100%;
+}

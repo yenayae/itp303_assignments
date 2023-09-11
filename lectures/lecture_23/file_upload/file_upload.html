@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>File Upload</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+</head>
+<body class="py-5">
+
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12">File Upload</h1>
+		</div> <!-- .row -->
+	</div> <!-- .container -->
+	<div class="container mt-4">
+
+		<form id="upload-form"
+		action="file_confirmation.php"
+		method="POST"
+		enctype="multipart/form-data">
+
+			<div class="form-group row">
+				<label for="file-id" class="sr-only">File:</label>
+				<div class="col-12">
+					<input type="file" id="file-id" name="file_name">
+				</div>
+			</div> <!-- .form-group -->
+
+			<div class="form-group row">
+				<div class="col-12 mt-2">
+					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="reset" class="btn btn-light">Reset</button>
+				</div>
+			</div> <!-- .form-group -->
+		</form>
+	</div> <!-- .container -->
+
+</body>
+</html>

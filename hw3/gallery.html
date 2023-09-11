@@ -1,0 +1,540 @@
+<!doctype html>
+<html>
+
+<head>
+<title>Interests | Sky: Children of the Light</title>
+<link rel="stylesheet" href="shared.css">
+
+<style>
+
+    #header {
+        height: 350px;
+        line-height: 350px;
+        width: 100%;
+        background-image: url("img/6_Vault003.png");
+        background-size: cover;
+    }
+    
+
+    hr {
+        width: 970px;
+        margin: auto;
+    
+    }
+
+    p {
+        padding: 15px;
+    }
+
+    #gallery-title {
+    
+        display: block;
+        height: 75px;
+        padding-left: 20px;
+        padding-top: 15px;        
+    }
+    h2 {
+        color: black;
+        font-size: 4em;
+        padding-top: 25px;
+    }
+    h3 {
+        color: white;
+    }
+    p {
+        color: white;
+    }
+
+    .img-panel {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .img-panel > div {
+        margin: 10px;
+    }
+
+    .b1 {
+        /* background-color: cadetblue; */
+        height: 250px;
+        width: 525px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .b2 {
+        /* background-color: cadetblue; */
+        height: 250px;
+        width: 415px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .b3 {
+        /* background-color: cadetblue; */
+        height: 350px;
+        width: 275px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .b4 {
+        /* background-color: cadetblue; */
+        height: 200px;
+        width: 200px;
+        /* float: right; */
+        overflow: hidden;
+        position: relative;
+       
+    }
+
+    .descrip-top {
+        display: flex;
+        /* background-color: cadetblue; */
+        height: 200px;
+        width: 665px;
+
+    }
+    .descrip-panel {
+        /* background-color: seagreen; */
+        height: 350px;
+        width: 665px;
+        /* background-color: rgb(240, 238, 249); */
+    }
+
+    .title-box {
+        height: 200px;
+        width: 465px;
+        background-color: cadetblue;
+        margin: 0px
+    }
+    .realm-title {
+        font-size: 4em;
+        font-family: abigate, serif;
+        text-align: center;
+        line-height:200px;
+
+    }
+
+    #daylight-prarie {
+        line-height: 75px;
+        position: relative;
+    }
+
+    #valley-of-triumph {
+        line-height: 75px;
+        position: relative;
+        top: 30px;
+    }
+
+    #golden-wasteland {
+        line-height: 75px;
+        position: relative;
+        top: 30px;
+    }
+
+    #vault-of-knowledge {
+        line-height: 75px;
+        position: relative;
+        top: 30px;
+    }
+
+    .realm-description {
+        /* background-color: palevioletred; */
+        color: rgb(26, 26, 26);
+    }
+
+    .b1 > img {
+        width: 115%;
+        height: auto;
+    }
+    .b2 > img {
+        width: 110%;
+        height: auto;
+    }
+    .b3 > img {
+        height: 100%;
+        width: auto;
+    }
+
+    .b4 > img {
+        width: 100%;
+        height: auto;
+
+    }
+
+    .overlay {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.6);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        text-align: center;
+        padding-top: 100px;
+        opacity: 0;
+        transition: .25s;
+    }
+    
+    .b1:hover .overlay {
+        opacity: 1;
+       
+    }
+    .b2:hover .overlay {
+        opacity: 1;
+    }
+    .b3:hover .overlay {
+        opacity: 1;
+    }
+    .b4:hover .overlay {
+        opacity: 1;
+    }
+    
+    .b1 #two-lines, .b1 #isle-gatekeeper, .b1 #prarie-social-space, .b2 #isle-memory{
+        padding-top: 87px;
+    }
+
+    .b3 .overlay {
+        padding-top: 150px;
+    }
+    .b3 #prarie-memory {
+        padding-top: 140px;
+    }
+    .b3 #threelines {
+        padding-top: 130px;
+    }
+    .b4 .overlay {
+        padding-top: 75px;
+    }
+    .b4 #citadel-building {
+        padding-top: 60px;
+    }
+
+
+
+</style>
+
+</head>
+
+<body>
+    <div id = "header">
+        <h1>Gallery</h1>
+    </div>  
+    
+
+	<ul id="navbar">
+		<li>
+			<a href="interests.html">Home</a>
+			<ul>
+				<li><a href="interests.html#description">Description</a></li>
+				<li><a href="interests.html#experience">Experience</a></li>
+                <li><a href="interests.html#aurora">Current Season</a></li>
+			</ul>
+		</li>
+        <li><a id = "active-nav" href="gallery.html">Gallery</a></li>
+		
+	</ul> <!-- navbar -->
+
+
+<div id = "main">
+
+
+
+    <div id = "gallery-title">
+        <h2>Realms</h2>
+    </div>
+
+    <hr>
+    
+    <!-- isle of dawn -->
+    <div id = img-panel1 class = "img-panel">
+        <div class = "b1">
+            <img src="img/isleofdawn/016_Sky.jpeg" alt="isle of dawn gatekeeper">
+            <div class = "overlay" id = "isle-gatekeeper">
+                <p>The Isle of Dawn Elder as a gate keeper, who informs you about the history and sends you off into the kingdom.</p>
+            </div>
+        </div>
+        <div class = "b2">
+            <img src="img/isleofdawn/104_Sky.jpeg" alt="isle of dawn elder">
+            <div class = "overlay" id = "isle-memory">
+                <p>The Isle Elder's memory and guidance towards the Eden Mountain. </p>
+            </div>
+        </div>
+        <div class = "b3">
+            <img src="img/isleofdawn/Isle_thatskygame.jpeg" alt="isle of dawn view">
+            <div class = "overlay" id = "threelines">
+                <p>"The transition from Dawn into Prairie shows a world beyond clouds."</p>
+            </div>
+        </div>
+        <div class = descrip-panel>
+            <div class = "descrip-top">
+                <div class = "title-box">
+                    <h3 class = "realm-title">Isle of Dawn</h3>
+                </div>
+                <div class = "b4">
+                    <img src="img/isleofdawn/019_Sky.jpeg" alt="isle of dawn gateway">
+                    <div class = "overlay">
+                        <p>The Isle Gateway.</p>
+                    </div>
+                </div>
+            </div>
+            <p class = "realm-description">Isle of Dawn is the first realm that you will visit when you first start the game. It will be the only Portal (gateway) available to you from Home. This is where you will encounter your first Winged Light and receive your cape. A tutorial will take you through how to find Spirits, more Winged Light to grow your fight power, and teach you how to fly.
+                Isle is based on the concept of birth, and the original name for this realm was Dawn.</p>
+        </div>
+       
+    </div>
+
+    <hr>
+
+    <!-- daylight prarie -->
+    <div id = "img-panel2" class = "img-panel">
+        <div class = "b2">
+            <img src="img/daylightprarie/008_Sky.jpeg" alt="daylight prarie temple">
+            <div class = "overlay">
+                <p>
+                The Prarie Temple.</p>
+            </div>
+                
+            </div>
+        <div class = "b1">
+            <img src="img/daylightprarie/004_Sky.jpeg" alt="daylight prarie social space">
+            <div class = "overlay" id = "prarie-social-space">
+                <p>The Daylight Prarie Social Space, a landing place to sit and rest or chat, or a gathering place before the adventure.</p>
+            </div>
+
+
+        </div>
+        <div class = descrip-panel>
+            <div class = "descrip-top">
+                <div class = "title-box">
+                    <h3 class = "realm-title">Daylight Prarie</h3>
+                </div>
+                <div class = "b4">
+                    <img src="img/daylightprarie/009c_Sky.jpeg" alt="daylight prarie shrine">
+                    <div class = "overlay">
+                        <p>Daylight Prarie shrine.</p>
+                    </div>
+                </div>
+            </div>
+            <p class = "realm-description">Daylight Prairie is the second realm you'll come across in your adventures. Here is where you begin your adventure proper, and on first playing the game, is likely where you will encounter other players for the first time. Sky is an online multiplayer experience, and the strangers that you meet are real players from around the globe.
+                Daylight Prairie is based on the concept of childhood. Its original name was Cloudy Day.</p>
+        </div>
+        <div class = "b3">
+            <img src="img/daylightprarie/105_Sky.jpeg" alt="daylight prarie elder memory">
+            <div class = "overlay" id = "prarie-memory">
+                <p>The Prarie Elder memory and his Light Creatures.</p>
+            </div>
+        </div>
+    </div>
+
+<hr>
+
+<!-- hidden forest -->
+    <div id = img-panel3 class = "img-panel">
+        <div class = "b1">
+            <img src="img/hiddenforest/027_Sky.jpeg" alt="hidden forest pathway to temple">
+            <div class = "overlay" id = "two-lines">
+                <p>"The concept behind the Forest was a foggy maze, and its elder seducing and trapping players."</p>
+            </div>
+        </div>
+        <div class = "b2">
+            <img src="img/hiddenforest/030_Sky.jpeg" alt="hidden forest elevated clearing">
+            <div class = "overlay">
+                <p>The Hidden Forest Elevated Clearning.</p>
+                </div>
+        </div>
+        <div class = "b3">
+            <img src="img/hiddenforest/022_Sky.jpeg" alt="hidden forest entrance pathway and lantern">
+            <div class = "overlay">
+                <p>Lanterns along pathways.</p>
+            </div>
+        </div>
+        <div class = descrip-panel>
+            <div class = "descrip-top">
+                <div class = "title-box">
+                    <h3 class = "realm-title">Hidden Forest</h3>
+                </div>
+                <div class = "b4">
+                    <img src="img/hiddenforest/maxresdefault.jpeg" alt="hidden forest sky kid holding umbrella">
+                    <div class = "overlay" id = "umbrella-overlay">
+                        <p>Umbrellas!</p>
+                    </div>
+                </div>
+            </div>
+            <p class = "realm-description">Hidden Forest is the third Realm along your journey, and here is the first time you may encounter creatures or environmental factors that can harm you. Rain can drain your cape energy and cause your light to go out, and Dark Crabs can knock you down and potentially cause you to lose Winged Light.               This realm is based on the concept of teenage years, and its original name was Rain.</p>
+        </div>
+    
+    </div>
+
+    <hr>
+
+    <!-- valley of triumph -->
+    <div id = "img-panel4" class = "img-panel">
+        <div class = "b2">
+            <img src="img/valleyoftriumph/045_Sky.jpeg" alt="valley of triumph colosseum">
+            <div class = "overlay">
+                <p>Valley of Triumph Colosseum.</p>
+            </div>
+        </div>
+        <div class = "b1">
+            <img src="img/valleyoftriumph/rebekah-chew-citadel-sky-valley-of-triumph-fanart.jpeg" alt="valley of triumph citadel">
+            <div class = "overlay">
+                <p>Valley of Triumph Citadel.</p>
+            </div>
+        </div>
+        <div class = descrip-panel>
+            <div class = "descrip-top">
+                <div class = "title-box">
+                    <h3 class = "realm-title" id = "valley-of-triumph">Valley of Triumph</h3>
+                </div>
+                <div class = "b4">
+                    <img src="img/valleyoftriumph/046_Sky.jpeg" alt="valley of triumph building">
+                    <div class = "overlay" id = "citadel-building">
+                        <p>Citadel Residential building.</p>
+                    </div>
+                </div>
+            </div>
+            <p class = "realm-description">Valley of Triumph is the fourth realm you will find to explore, and will take you through the remnants of ancient cities. One route through the Realm will take you through a sliding race; another route through a flying race. Both races end in the same Coliseum, beyond which is the Temple where you will meet the Valley Elders and be able to move on to the next Realm.
+                Valley of Triumph is built around the concept of adulthood, and its original name was Sunset.</p>
+        </div>
+        <div class = "b3">
+            <img src="img/valleyoftriumph/Valley_race2-copy.png" alt="valley of triumph ski race tracks">
+            <div class = "overlay">
+                <p>Flying race takeoff.</p>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- golden wasteland -->
+    <div id = img-panel5 class = "img-panel">
+        <div class = "b1">
+            <img src="img/goldenwasteland/148_Sky.jpeg" alt="golden wasteland overview">
+            <div class = "overlay">
+                <p>Overview of the Golden Wasteland.</p>
+            </div>
+        </div>
+        <div class = "b2">
+            <img src="img/goldenwasteland/160_Sky.jpeg" alt="golden wasteland dark dragon">
+            <div class = "overlay">
+                <p>Dark Dragons patrol and attack players.</p>
+            </div>
+        </div>
+        <div class = "b3">
+            <img src="img/goldenwasteland/158_Sky.jpeg" alt="golden wastleand temple shrine">
+            <div class = "overlay">
+                <p>Golden Wasteland temple shrine.</p>
+            </div>
+        </div>
+        <div class = descrip-panel>
+            <div class = "descrip-top">
+                <div class = "title-box">
+                    <h3 class = "realm-title" id = "golden-wasteland">Golden Wasteland</h3>
+                </div>
+                <div class = "b4">
+                    <img src="img/goldenwasteland/151_Sky.jpeg" alt="golden wasteland turrent">
+                    <div class = "overlay">
+                        <p>Hostile turrets.</p>
+                    </div>
+                </div>
+            </div>
+            <p class = "realm-description">Golden Wasteland is the fifth realm you will come across. This is the first realm where you encounter Dark Dragons, as well as an abundant amount of Dark Crabs. You'll also find polluted water, a harmful substance that will slowly drain your light if you stand in it. This Realms has several offshoot areas to explore.
+                Golden Wasteland is based off the concept of middle years, and its original name was Dusk.</p>
+        </div>
+    
+    </div>
+
+    <hr>
+
+    <!-- vault of knowledge -->
+    <div id = "img-panel6" class = "img-panel">
+        <div class = "b2">
+            <img src="img/vaultofknowledge/6_Vault002.png" alt="vault of knowledge first level">
+            <div class = "overlay">
+                <p>Vault represented by the Prarie constellation.</p>
+            </div>
+        </div>
+        <div class = "b1">
+            <img src="img/vaultofknowledge/195_Sky.jpeg" alt="vault of knowledge summit temple shrine">
+            <div class = "overlay">
+                <p>The Summit.</p>
+            </div>
+        </div>
+        <div class = descrip-panel>
+            <div class = "descrip-top">
+                <div class = "title-box">
+                    <h3 class = "realm-title" id = "vault-of-knowledge">Vault of Knowledge</h3>
+                </div>
+                <div class = "b4">
+                    <img src="img/vaultofknowledge/6_Vault001.png" alt="vault of knowledge entrance">
+                    <div class = "overlay">
+                        <p>Vault entrance.</p>
+                    </div>
+                </div>
+            </div>
+            <p class = "realm-description">Vault of Knowledge is the sixth realm you'll encounter. This Realm consists of several levels as well as several offshoot areas. There are a number of puzzles to complete in order to make your way up the Vault floor by floor. Two large doors require four players to open and one area requires a special cape in order to enter it.
+                Vault of Knowledge is based on the concept of ageing/old age, and it's original name was Night.</p>
+        </div>
+        <div class = "b3">
+            <img src="img/vaultofknowledge/7_Days_Vault_6.jpeg" alt="vault of knowledge spirit mantas">
+            <div class = "overlay">
+                <p>Spirit Mantas.</p>
+            </div>
+        </div>
+    </div>    
+
+    <hr>
+
+    <!-- eye of eden -->
+    <div id = img-panel7 class = "img-panel">
+        <div class = "b1">
+            <img src="img/eyeofeden/tumblr_fc2c2c6c5fb851ce437f49b2b80568c3_490e50ec_1280.jpeg" alt="overview of eden" >
+            <div class = "overlay">
+                <p>Overview of Eden.</p>
+            </div>
+        </div>
+        <div class = "b2">
+            <img src="img/eyeofeden/eden-summit.png" alt="eden summit">
+            <div class = "overlay">
+                <p>"Return the Light of the Fallen."</p>
+            </div>
+        </div>
+        <div class = "b3">
+            <img src="img/eyeofeden/196_Sky.jpeg" alt="eden mountain">
+            <div class = "overlay">
+                <p>Eden Mountain.</p>
+            </div>
+        </div>
+        <div class = descrip-panel>
+            <div class = "descrip-top">
+                <div class = "title-box">
+                    <h3 class = "realm-title">Eye of Eden</h3>
+                </div>
+                <div class = "b4">
+                    <img src="img/eyeofeden/eden-mapp.png" alt="eden map">
+                    <div class = "overlay">
+                        <p>Map of Eden.</p>
+                    </div>
+                </div>
+            </div>
+            <p class = "realm-description">Eye of Eden is the final realm you will encounter. This realm is based on the concept of death, and the only outcome of Eden is to deposit as much Winged Light as you can and die. This is the only way to obtain Ascended Candles, which can be used to buy Wing Buffs. After dying, the player is reborn along with any Wing Buffs they purchased, allowing them to get a higher cape level.
+
+                Eye of Eden's original name was Storm.</p>
+        </div>
+    
+    </div>
+
+    
+<!-- main div -->
+</div> 
+
+
+<div id = "footer">University of Southern California &copy; 2023</div>
+</body>
+
+
+</html>
